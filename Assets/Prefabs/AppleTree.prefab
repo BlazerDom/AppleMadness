@@ -7450,8 +7450,8 @@ MonoBehaviour:
   appleRB: {fileID: 0}
   treeRotSpeed: 1
   spawnMax: 2
-  appleMaxVel: 500
-  appleMinVel: 300
+  appleMaxVel: 650
+  appleMinVel: 400
   scoreDifficult: 10000
   scoreDifficultTwo: 100000
 --- !u!1 &4175140576661056539

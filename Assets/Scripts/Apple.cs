@@ -16,6 +16,10 @@ public class Apple : MonoBehaviour
 
     public bool addBasket = false;
 
+    public Material[] appleMaterials;
+    public GameObject goodAppleGO;
+    public GameObject badAppleGO;
+
     public float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
     public float HealAppleChance = Mathf.Clamp(.05f, 0f, 1f);
     public float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
@@ -23,44 +27,48 @@ public class Apple : MonoBehaviour
     public void Start()
     {
         gameObject.transform.localScale = Vector3.zero;
-
         WaitForLaunch();
-        MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer mr = goodAppleGO.GetComponentInChildren<MeshRenderer>();
         float i = Random.value;
         float j = 0f;
 
+        //Red Apple chances
         if (i > j && i < j + redAppleChance)
         {
             cost = 500;            
-            mr.material.color = Color.red;
+            mr.material = appleMaterials[1];
             damage = 4;
         }
 
         j += redAppleChance;
 
+        //Bad Apple chances
         if (i > j && i < j + badAppleChance)
         {
-            cost = 10000;
-            mr.material.color = Color.black;
+            cost = 0;
+            goodAppleGO.SetActive(false);
+            badAppleGO.SetActive(true);           
             badApple = true;
             damage = 0;
         }
 
         j += badAppleChance;
 
+        //Heal Apple chances
         if (i > j && i < j + HealAppleChance)
         {
             cost = 500;
-            mr.material.color = Color.yellow;
+            mr.material = appleMaterials[2];
             heal = 6;
             damage = 0;
         }
 
+        //add basket Apple chances
         j += HealAppleChance; 
         if(i > j && i < j + resurectAppleChance)
         {
             cost = 0;
-            mr.material.color = Color.blue;
+            mr.material = appleMaterials[3];
             addBasket = true;
         }
     }
@@ -76,8 +84,8 @@ public class Apple : MonoBehaviour
 
     private void WaitForLaunch()
     {
-        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
 
-        if (transform.localScale.x < 0.3f) Invoke("WaitForLaunch", 0.1f);
+        if (transform.localScale.x < 1f) Invoke("WaitForLaunch", 0.1f);
     }
 }
