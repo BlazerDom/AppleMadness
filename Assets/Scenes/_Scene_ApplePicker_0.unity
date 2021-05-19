@@ -1632,9 +1632,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
-    - target: {fileID: 6722033686855325257, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
-      propertyPath: MaxDistance
-      value: 500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
