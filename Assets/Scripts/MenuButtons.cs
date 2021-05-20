@@ -23,4 +23,10 @@ public class MenuButtons : MonoBehaviour
         musicToggle = !musicToggle;
         audioSource.enabled = musicToggle;
     }
+
+    public void ResetScore()
+    {
+        HighScore.score = 1000;
+        PlayerPrefs.SetInt("HighScore", 1000);
+    }
 }
