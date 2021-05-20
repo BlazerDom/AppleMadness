@@ -52,6 +52,7 @@ public class Apple : MonoBehaviour
             mr.material = appleMaterials[1];
             damage = 4;
             audioSource.clip = redAppleSound[Random.Range(0, redAppleSound.Length)];
+            audioSource.priority = 122;
         }
 
         j += redAppleChance;
@@ -66,6 +67,7 @@ public class Apple : MonoBehaviour
             damage = 0;
             audioSource.clip = badAppleSound[Random.Range(0, badAppleSound.Length)];
             audioSource.volume = 1;
+            audioSource.priority = 119;
         }
 
         j += badAppleChance;
@@ -78,6 +80,8 @@ public class Apple : MonoBehaviour
             heal = 6;
             damage = 0;
             audioSource.clip = healAppleSound[Random.Range(0, healAppleSound.Length)];
+            audioSource.volume = 0.8f;
+            audioSource.priority = 121;
         }
 
         //add basket Apple chances
@@ -87,6 +91,9 @@ public class Apple : MonoBehaviour
             cost = 0;
             mr.material = appleMaterials[3];
             addBasket = true;
+            audioSource.clip = resurectAppleSound[Random.Range(0, resurectAppleSound.Length)];
+            audioSource.volume = 0.8f;
+            audioSource.priority = 110;
         }
     }
 

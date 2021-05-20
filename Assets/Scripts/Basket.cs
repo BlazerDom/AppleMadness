@@ -17,8 +17,12 @@ public class Basket : MonoBehaviour
 
     public Vector3 pos = Vector3.zero;
 
+    public AudioClip[] catchSounds;
+    private AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         scoreGT = scoreGO.GetComponent<Text>();
     }
@@ -85,9 +89,11 @@ public class Basket : MonoBehaviour
         
             if (t == "Apple")
             {
+                audioSource.PlayOneShot(catchSounds[Random.Range(0, catchSounds.Length)]);
                 score = int.Parse(scoreGT.text);
                 score += aScript.cost;
                 scoreGT.text = score.ToString();
+
 
                 if (score > HighScore.score) HighScore.score = score;
 

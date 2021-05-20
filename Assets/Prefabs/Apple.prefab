@@ -129,13 +129,16 @@ MonoBehaviour:
   badAppleChance: 0.03
   resurectAppleChance: 0.01
   greenAppleSound:
-  - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
   - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
   - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}
   - {fileID: 8300000, guid: 13a4a7645fefd4448aff48e58d23203d, type: 3}
+  - {fileID: 8300000, guid: 01891ecb1411f07438b985962e629094, type: 3}
   redAppleSound:
+  - {fileID: 8300000, guid: 622a5db55b2fb8640a62cc6735e6cb8c, type: 3}
+  - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
   - {fileID: 8300000, guid: 1d9373685db5c2246bd29fe36df31fc1, type: 3}
-  - {fileID: 8300000, guid: 4c689fa3821a4e2419fde931dd60e56c, type: 3}
+  - {fileID: 8300000, guid: 5fcde3c4ed893af48b2528955ad67de8, type: 3}
+  - {fileID: 8300000, guid: 50c2776e180e3db4ebba7f10c5f20eed, type: 3}
   healAppleSound:
   - {fileID: 8300000, guid: 0b13ca4fd5fb31c4db13466be46452bc, type: 3}
   - {fileID: 8300000, guid: d8ceebe738d7c4b4c9ab2dbcdd70cc77, type: 3}
@@ -143,12 +146,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e08b906f163f1174bb9302abbfbd5f3c, type: 3}
   - {fileID: 8300000, guid: 4b449e720d62e48489e335d996301e93, type: 3}
   - {fileID: 8300000, guid: 9840c9babfd4d314380646746962bcb3, type: 3}
+  - {fileID: 8300000, guid: d4837cc3b3ab76d48865e5ff3585b285, type: 3}
   badAppleSound:
   - {fileID: 8300000, guid: f4827cc46906781489a1fb6c259e96a9, type: 3}
   - {fileID: 8300000, guid: a7d58c535d410a34a95a7f218a9b2378, type: 3}
   - {fileID: 8300000, guid: e20872725b0b4304c98276f6fa8273ec, type: 3}
   - {fileID: 8300000, guid: e53fba2bb2a6ecb419fb93d4229e09c5, type: 3}
-  resurectAppleSound: []
+  - {fileID: 8300000, guid: 562f9e7e4a3932d439a4381695917ac9, type: 3}
+  resurectAppleSound:
+  - {fileID: 8300000, guid: 73e6207fd9d334d41bb96f3dbc4a8b38, type: 3}
+  - {fileID: 8300000, guid: 588b25961c65ae749a9eb91f354d2444, type: 3}
+  - {fileID: 8300000, guid: ce6ae7a526f03014a9582f3e30eeb263, type: 3}
+  - {fileID: 8300000, guid: 05a175e2e647d54418badd121a180718, type: 3}
 --- !u!54 &7798783752321812982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,7 +186,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
