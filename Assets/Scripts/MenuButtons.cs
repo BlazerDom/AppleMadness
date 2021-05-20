@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    private bool musicToggle = true;
     public void RestartPressed()
     {
         SceneManager.LoadScene("_Scene_ApplePicker_0");
@@ -13,5 +14,13 @@ public class MenuButtons : MonoBehaviour
     public void ExitPressed()
     {
         Application.Quit();
+    }
+
+    public void MusicToggle()
+    {
+        
+        AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
+        musicToggle = !musicToggle;
+        audioSource.enabled = musicToggle;
     }
 }

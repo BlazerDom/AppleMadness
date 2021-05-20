@@ -13,8 +13,9 @@ public class AppleSpawner : MonoBehaviour
     public float treeRotSpeed = 1f;
     public int spawnMin = 1;
     public int spawnMax = 3;
-    public float appleMaxVel = 500f;
-    public float appleMinVel = 300f;
+    public float appleVel = 500f;
+    public float velScaleMin = -0.2f;
+    public float velScaleMax = 1f;
     private float dirrection = 0;
 
     public int scoreDiffForMax = 10000;
@@ -43,14 +44,15 @@ public class AppleSpawner : MonoBehaviour
         int i = int.Parse(scoreGT.text);
         if ( i > scoreDiffForMax)
         {
-            spawnMax += 1;
+            spawnMax += spawnMin - 1;
             scoreDiffForMax *= 2;
         }
         
         if (i > scoreDiffForSpeed)
         {
-            treeRotSpeed *= 2;
-            scoreDiffForSpeed *= 3;
+            treeRotSpeed *= 1.15f;
+            scoreDiffForSpeed *= 2;
+            rollingAnim.speed = treeRotSpeed;
         }
 
         if(i > scoreDiffForMin)
@@ -67,7 +69,7 @@ public class AppleSpawner : MonoBehaviour
         {
             costil = 0;
             int i = Random.Range(0, treeOpSounds.Length);
-            AppleCreator(0.02f, 0.5f);
+            AppleCreator(velScaleMin, velScaleMax);
             rollingAnim.SetFloat("Dirrection", 1);
             audioSorce.pitch = Random.Range(0.9f, 1.1f);
             audioSorce.PlayOneShot(treeOpSounds[i]);
@@ -80,7 +82,7 @@ public class AppleSpawner : MonoBehaviour
         {
             costil = 1;
             int i = Random.Range(0, treeOpSounds.Length);
-            AppleCreator(-0.5f, -0.02f);
+            AppleCreator(-velScaleMax, -velScaleMin);
             rollingAnim.SetFloat("Dirrection", -1);
             audioSorce.pitch = Random.Range(0.9f, 1.1f);
             audioSorce.PlayOneShot(treeOpSounds[i]);
@@ -95,21 +97,21 @@ public class AppleSpawner : MonoBehaviour
             dirrection = Random.Range(minF, maxF);
 
             thatAppleGO = Instantiate<GameObject>(appleGO);
-            thatAppleGO.transform.position = leavesSpawnerGO[spawnPointIndex].transform.position + new Vector3(1, Random.Range(-1, 1), Random.Range(-1, 1));
+            thatAppleGO.transform.position = leavesSpawnerGO[spawnPointIndex].transform.position;
             thatAppleGO.transform.parent = leavesSpawnerGO[spawnPointIndex].transform;
 
             appleRB = thatAppleGO.GetComponent<Rigidbody>();
 
-            StartCoroutine(WaitForLaunch(thatAppleGO, appleRB, dirrection, 2.2f / treeRotSpeed));            
+            StartCoroutine(WaitForApple(thatAppleGO, appleRB, dirrection, 2.2f / treeRotSpeed));            
         }
     }
 
-    IEnumerator WaitForLaunch(GameObject thatAppleGO, Rigidbody appleRB, float dirrection, float i)
+    IEnumerator WaitForApple(GameObject thatAppleGO, Rigidbody appleRB, float dirrection, float i)
     {
         yield return new WaitForSeconds(i);
         thatAppleGO.transform.parent = null;
         appleRB.isKinematic = false;
-        appleRB.AddForce(new Vector3(dirrection, Random.Range(0, 0.5f), 0) * Random.Range(appleMinVel, appleMaxVel));
+        appleRB.AddForce(new Vector3(dirrection, Random.Range(1f, 1f), 0) * appleVel);
         appleRB.AddTorque(Random.insideUnitSphere * 5f);
     }
 }

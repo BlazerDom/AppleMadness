@@ -48,7 +48,7 @@ public class Apple : MonoBehaviour
         //Red Apple chances
         if (i > j && i < j + redAppleChance)
         {
-            cost = 500;            
+            cost = 400;            
             mr.material = appleMaterials[1];
             damage = 4;
             audioSource.clip = redAppleSound[Random.Range(0, redAppleSound.Length)];
@@ -75,7 +75,7 @@ public class Apple : MonoBehaviour
         //Heal Apple chances
         if (i > j && i < j + HealAppleChance)
         {
-            cost = 500;
+            cost = 600;
             mr.material = appleMaterials[2];
             heal = 6;
             damage = 0;
@@ -88,8 +88,9 @@ public class Apple : MonoBehaviour
         j += HealAppleChance; 
         if(i > j && i < j + resurectAppleChance)
         {
-            cost = 0;
+            cost = 1000;
             mr.material = appleMaterials[3];
+            damage = 6;
             addBasket = true;
             audioSource.clip = resurectAppleSound[Random.Range(0, resurectAppleSound.Length)];
             audioSource.volume = 0.8f;

@@ -125,7 +125,7 @@ MonoBehaviour:
   goodAppleGO: {fileID: 3013072381827453246}
   badAppleGO: {fileID: 18402452672729820}
   redAppleChance: 0.2
-  HealAppleChance: 0.05
+  HealAppleChance: 0.06
   badAppleChance: 0.03
   resurectAppleChance: 0.01
   greenAppleSound:
