@@ -126,8 +126,7 @@ public class Basket : MonoBehaviour
         apScript.lScript.RemoveAt(i);
         if(i == 0)
         {
-            Time.timeScale = 0;
-            apScript.MenuOnOff(true, 0f);
+            apScript.MenuOnOff();
         }
         if (apScript.lBaskets[i] != null)
         {

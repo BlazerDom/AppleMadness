@@ -23,13 +23,9 @@ public class ApplePicker : MonoBehaviour
 
     public GameObject menu;
 
-    public Button startB;
     public Slider basketSliderPrefab;
 
     public KeyCode mainMenu;
-
-    private bool iBool = true;
-    private int i = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -65,28 +61,14 @@ public class ApplePicker : MonoBehaviour
     public void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        Time.timeScale = 0;
-        startB = startB.GetComponent<Button>();
-        startB.onClick.AddListener(StartClickEvent);
-        startB.gameObject.SetActive(true);
+        MenuOnOff();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(mainMenu))
         {
-            if (iBool)
-            {
-                MenuOnOff(iBool, i);
-                iBool = false;
-                i = 1;
-            }
-            else
-            {
-                MenuOnOff(iBool, i);
-                iBool = true;
-                i = 0;
-            }
+            MenuOnOff();
         }
     }
 
@@ -110,15 +92,19 @@ public class ApplePicker : MonoBehaviour
         //if (lScript[i].basketHP > basketHP) lScript[i].basketHP = basketHP;
         //lBasketSL[i].value = (float)lScript[i].basketHP / (float)basketHP;
     }
-    public void StartClickEvent()
+    public void MenuOnOff()
     {
-        Time.timeScale = 1;
-        startB.gameObject.SetActive(false);
-    }
-    public void MenuOnOff(bool active, float timeScale)
-    {
-        Time.timeScale = timeScale;
-        menu.gameObject.SetActive(active);
+        menu.gameObject.SetActive(!menu.gameObject.activeSelf);
+
+        if (menu.gameObject.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
     }
 
     public void BasketCreator(int i)
