@@ -113,7 +113,16 @@ public class Basket : MonoBehaviour
                         apPicker.BasketCreator(i);
                     }
                 }
-                Destroy(apple);
+                Destroy(apple, 1.1f);
+                MeshRenderer[] mr = apple.GetComponentsInChildren<MeshRenderer>();
+                Rigidbody rb = apple.GetComponent<Rigidbody>();
+                SphereCollider sc = apple.GetComponent<SphereCollider>();
+                sc.enabled = false;
+                rb.isKinematic = true;
+                for(int i = 0; i < mr.Length; i++)
+                {
+                    mr[i].enabled = false;
+                }
             }
 
         }

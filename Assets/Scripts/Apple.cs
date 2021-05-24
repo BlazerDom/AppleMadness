@@ -36,6 +36,8 @@ public class Apple : MonoBehaviour
     private Rigidbody rb;
     private AudioSource audioSource;
     private int soundPlayInt = 0;
+    private bool death = false;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -97,13 +99,16 @@ public class Apple : MonoBehaviour
             audioSource.clip = resurectAppleSound[Random.Range(0, resurectAppleSound.Length)];
             audioSource.volume = 0.8f;
             audioSource.priority = 110;
+            TrailRenderer tr = gameObject.GetComponent<TrailRenderer>();
+            tr.enabled = true;
         }
     }
 
     private void Update()
     {
-        if (transform.position.y < bottomY)
+        if (transform.position.y < bottomY && !death)
         {
+            death = true;
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed(this.gameObject, damage);
         }

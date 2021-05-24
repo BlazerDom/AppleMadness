@@ -75,7 +75,12 @@ public class ApplePicker : MonoBehaviour
     public void AppleDestroyed(GameObject apple, int damage)
     {
         int i = lScript.Count - 1;
-        Destroy(apple);
+        MeshRenderer mr = apple.GetComponentInChildren<MeshRenderer>();
+        Rigidbody rb = apple.GetComponent<Rigidbody>();        
+        rb.isKinematic = true;
+        mr.enabled = false;
+
+        Destroy(apple, 1.1f);
         lScript[i].basketHP -= damage;
         lBasketSL[i].value = (float)lScript[i].basketHP / (float)basketHP;
     }
