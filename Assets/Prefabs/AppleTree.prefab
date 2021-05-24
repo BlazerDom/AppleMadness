@@ -6549,7 +6549,7 @@ MonoBehaviour:
   treeRotSpeed: 1
   spawnMin: 1
   spawnMax: 3
-  appleVel: 340
+  appleVel: 360
   velScaleMin: -0.2
   velScaleMax: 1
   scoreDiffForMax: 10000
