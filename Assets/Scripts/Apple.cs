@@ -16,6 +16,8 @@ public class Apple : MonoBehaviour
 
     public bool addBasket = false;
 
+    public float bounce = 100f;
+
     public Material[] appleMaterials;
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
@@ -117,5 +119,10 @@ public class Apple : MonoBehaviour
         transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
 
         if (transform.localScale.x < 1f) Invoke("WaitForLaunch", 0.1f);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        rb.AddForce(other.contacts[0].normal * bounce);
     }
 }
