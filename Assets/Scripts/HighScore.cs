@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class HighScore : MonoBehaviour
 {
     public static RectTransform ScorePanelRectT;
-    public string hsLevel = "LevelOneHighScore";
-    public string textLevel = $"Level 1 High Score: {score}";
+    public string hsLevel = "Level_1_HighScore";
+    public string textLevel = "Level 1";
     private void Awake()
     {
         if (PlayerPrefs.HasKey(key: hsLevel))
@@ -23,7 +23,7 @@ public class HighScore : MonoBehaviour
     private void Update()
     {
         Text gt = this.GetComponent<Text>();
-        gt.text = textLevel;
+        gt.text = textLevel + $" High Score: {score}";
 
         if(score > PlayerPrefs.GetInt(key: hsLevel))
         {

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     private bool musicToggle = true;
+    public GameObject menu;
+    public GameObject levelsMenu;
+    public string hsLevel = "Level_1_HighScore";
 
     public void StartButton()
     {
@@ -14,7 +17,8 @@ public class MenuButtons : MonoBehaviour
     }
     public void RestartPressed()
     {
-        SceneManager.LoadScene("_Scene_ApplePicker_0");
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     public void ExitPressed()
@@ -33,6 +37,29 @@ public class MenuButtons : MonoBehaviour
     public void ResetScore()
     {
         HighScore.score = 1000;
-        PlayerPrefs.SetInt("HighScore", 1000);
+        PlayerPrefs.SetInt(key: hsLevel, 1000);
+    }
+
+    public void ChangeLevelButton()
+    {
+        if (menu.activeSelf)
+        {
+            menu.SetActive(false);
+            levelsMenu.SetActive(true);
+        }
+    }
+
+    public void BackToMenu()
+    {
+        if (levelsMenu.activeSelf)
+        {
+            levelsMenu.SetActive(false);
+            menu.SetActive(true);
+        }
+    }
+
+    public void LoadLevelPressed(int i)
+    {
+        SceneManager.LoadScene($"_Scene_ApplePicker_{i -= 1}");
     }
 }

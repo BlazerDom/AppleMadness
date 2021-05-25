@@ -685,6 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb546f922ef89e40b80944f3cacb972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hsLevel: Level_3_HighScore
+  textLevel: 
 --- !u!1001 &1453179549058323630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -696,6 +698,18 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 433806223}
+    - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
+      propertyPath: badAppleChance
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
+      propertyPath: healAppleChance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
+      propertyPath: resurectAppleChance
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1453179549524365587, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -753,6 +767,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3654077829643058027, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: hsLevel
+      value: Level_3_HighScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829643058027, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: textLevel
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3654077829720387329, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -813,6 +835,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5224252102245466997, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: hsLevel
+      value: Level_3_HighScore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
 --- !u!1001 &6430857233236200135
@@ -834,6 +860,14 @@ PrefabInstance:
       propertyPath: appleMinVel
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: treeRotSpeed
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074988317678018689, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a3d793644008df4488c508114de8ea5, type: 2}
     - target: {fileID: 8341125281464909884, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -894,5 +928,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9152886481826773589, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b41e681389fad04ca894a660f7f6139, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}

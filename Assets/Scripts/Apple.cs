@@ -57,7 +57,7 @@ public class Apple : MonoBehaviour
         audioSource.clip = greenAppleSound[Random.Range(0, greenAppleSound.Length)];
 
         //Red Apple chances
-        if (i > j && i < j + redAppleChance)
+        if (i != 0 && i > j && i < j + redAppleChance)
         {
             cost = 400;            
             mr.material = appleMaterials[1];
@@ -69,7 +69,7 @@ public class Apple : MonoBehaviour
         j += redAppleChance;
 
         //Bad Apple chances
-        if (i > j && i < j + badAppleChance)
+        if (i != 0 && i > j && i < j + badAppleChance)
         {
             cost = 0;
             goodAppleGO.SetActive(false);
@@ -84,7 +84,7 @@ public class Apple : MonoBehaviour
         j += badAppleChance;
 
         //Heal Apple chances
-        if (i > j && i < j + healAppleChance)
+        if (i != 0 && i > j && i < j + healAppleChance)
         {
             cost = 600;
             mr.material = appleMaterials[2];
@@ -97,7 +97,7 @@ public class Apple : MonoBehaviour
 
         //add basket Apple chances
         j += healAppleChance; 
-        if(i > j && i < j + resurectAppleChance)
+        if(i != 0 && i > j && i < j + resurectAppleChance)
         {
             cost = 1000;
             mr.material = appleMaterials[3];
