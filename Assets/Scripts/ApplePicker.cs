@@ -15,6 +15,12 @@ public class ApplePicker : MonoBehaviour
     public int basketHP = 10;
     public float basketStretch = 10;
 
+    [Header("Set Apple Chances")]
+    public float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
+    public float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
+    public float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
+    public float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
+
     public List<GameObject> lBaskets;
     public List<Basket> lScript;
     public List<Slider> lBasketSL;
@@ -41,20 +47,6 @@ public class ApplePicker : MonoBehaviour
         for(int i = 0; i < numBaskets; i++)
         {
             BasketCreator(i);
-            //GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
-            //GameObject canvas = GameObject.Find("FirstCanvas");
-            //Slider basketSL = Instantiate<Slider>(basketSliderPrefab, canvas.transform);
-            //basketSL = basketSL.GetComponent<Slider>();
-            
-            //lBasketSL.Add(basketSL);
-            //lBaskets.Add(tBasketGO);
-            //lScript.Add(tBasketGO.GetComponent<Basket>());
-            //lScript[i].basketHP = basketHP;
-            //Vector3 pos = Vector3.zero;
-            //pos.y = basketBottomY + (basketSpacingY * i);
-            //tBasketGO.transform.position = pos;
-            //lScript[i].alpha = 1f / (i*25f);
-            //basketSL.transform.position -= new Vector3(0, 20 * i); 
         }
     }
 
@@ -129,4 +121,5 @@ public class ApplePicker : MonoBehaviour
         lScript[i].alpha = 1f / (i * basketStretch);
         basketSL.transform.position -= new Vector3(0, 20 * i);
     }
+
 }

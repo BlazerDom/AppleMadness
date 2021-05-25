@@ -22,10 +22,10 @@ public class Apple : MonoBehaviour
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
 
-    public float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
-    public float HealAppleChance = Mathf.Clamp(.05f, 0f, 1f);
-    public float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
-    public float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
+    private float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
+    private float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
+    private float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
+    private float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
 
     public AudioClip[] greenAppleSound;
     public AudioClip[] redAppleSound;
@@ -40,6 +40,13 @@ public class Apple : MonoBehaviour
 
     public void Start()
     {
+        ApplePicker ap = Camera.main.GetComponent<ApplePicker>();
+        redAppleChance = ap.redAppleChance;
+        healAppleChance = ap.healAppleChance;
+        badAppleChance = ap.badAppleChance;
+        resurectAppleChance = ap.resurectAppleChance;
+
+
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         gameObject.transform.localScale = Vector3.zero;
@@ -77,7 +84,7 @@ public class Apple : MonoBehaviour
         j += badAppleChance;
 
         //Heal Apple chances
-        if (i > j && i < j + HealAppleChance)
+        if (i > j && i < j + healAppleChance)
         {
             cost = 600;
             mr.material = appleMaterials[2];
@@ -89,7 +96,7 @@ public class Apple : MonoBehaviour
         }
 
         //add basket Apple chances
-        j += HealAppleChance; 
+        j += healAppleChance; 
         if(i > j && i < j + resurectAppleChance)
         {
             cost = 1000;

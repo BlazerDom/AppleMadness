@@ -20,8 +20,14 @@ public class Basket : MonoBehaviour
     public AudioClip[] catchSounds;
     private AudioSource audioSource;
 
+    public Vector3 standartScale= Vector3.zero;
+    private ApplePicker apPicker;
+    public bool improveBasket = false;
+
     private void Start()
     {
+        ApplePicker apPicker = Camera.main.GetComponent<ApplePicker>();
+        standartScale = transform.localScale;
         audioSource = GetComponent<AudioSource>();
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         scoreGT = scoreGO.GetComponent<Text>();
@@ -81,6 +87,8 @@ public class Basket : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        apPicker = Camera.main.GetComponent<ApplePicker>();
+
         if (other.gameObject != null)
         {
             GameObject apple = other.gameObject;
@@ -97,16 +105,29 @@ public class Basket : MonoBehaviour
 
                 if (score > HighScore.score) HighScore.score = score;
 
-                if (aScript.badApple) DestroyBasket();
+                if (aScript.badApple)
+                {
+                    DestroyBasket();
+                }
 
                 if (aScript.heal > 0)
                 {
-                    ApplePicker apPicker = Camera.main.GetComponent<ApplePicker>();
                     apPicker.BasketHeal(aScript.heal);
                 }
                 if (aScript.addBasket)
                 {
-                    ApplePicker apPicker = Camera.main.GetComponent<ApplePicker>();
+                    if (apPicker.numBaskets + 1 == apPicker.lScript.Count)
+                    {
+                        for (int i = 0; i < apPicker.lBaskets.Count; i++)
+                        {
+                            Vector3 s = apPicker.lBaskets[i].transform.localScale;
+                            if (s == apPicker.lScript[i].standartScale)
+                            {
+                                apPicker.lScript[i].improveBasket = true;
+                                apPicker.lBaskets[i].transform.localScale = new Vector3(s.x + 1.5f, s.y, s.z);
+                            }
+                        }
+                    }
                     if (apPicker.numBaskets + 1 > apPicker.lScript.Count)
                     {
                         int i = apPicker.lScript.Count;
@@ -130,20 +151,49 @@ public class Basket : MonoBehaviour
 
     private void DestroyBasket()
     {
-        ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
-        int i = apScript.lScript.Count - 1;
-        apScript.lScript.RemoveAt(i);
-        if(i == 0)
+        apPicker = Camera.main.GetComponent<ApplePicker>();
+        int i = apPicker.lScript.Count - 1;
+        if (i == 0)
         {
-            apScript.MenuOnOff();
+            apPicker.MenuOnOff();
         }
-        if (apScript.lBaskets[i] != null)
+        if (apPicker.lBaskets[i] != null)
         {
-            apScript.lBasketSL[i].value = 0;
-            Destroy(apScript.lBasketSL[i].gameObject);
-            Destroy(apScript.lBaskets[i]);
-            apScript.lBaskets.RemoveAt(i);
-            apScript.lBasketSL.RemoveAt(i);
+            if (apPicker.lScript[i].improveBasket)
+            {
+                for (int j = 0; j < apPicker.lBaskets.Count; j++)
+                {
+                    Vector3 s = apPicker.lBaskets[j].transform.localScale;
+                    if (s.x != apPicker.lScript[j].standartScale.x)
+                    {
+                        apPicker.lScript[j].improveBasket = false;
+                        apPicker.lBaskets[j].transform.localScale = new Vector3(s.x - 1.5f, s.y, s.z);
+                    }
+                }
+
+            }
+            else
+            {
+                apPicker.lScript.RemoveAt(i);
+                apPicker.lBasketSL[i].value = 0;
+                Destroy(apPicker.lBasketSL[i].gameObject);
+                Destroy(apPicker.lBaskets[i]);
+                apPicker.lBaskets.RemoveAt(i);
+                apPicker.lBasketSL.RemoveAt(i);
+            }
+        }
+    }
+
+    private void BasketScale(float f, bool b)
+    {
+        for (int i = 0; i < apPicker.lBaskets.Count; i++)
+        {
+            Vector3 s = apPicker.lBaskets[i].transform.localScale;
+            if (s == apPicker.lScript[i].standartScale)
+            {
+                apPicker.lScript[i].improveBasket = b;
+                apPicker.lBaskets[i].transform.localScale = new Vector3(s.x + f, s.y, s.z);
+            }
         }
     }
 }

@@ -103,6 +103,10 @@ MonoBehaviour:
   basketSpacingY: -0.7
   basketHP: 10
   basketStretch: 18
+  redAppleChance: 0.2
+  healAppleChance: 0.06
+  badAppleChance: 0.03
+  resurectAppleChance: 0.01
   lBaskets: []
   lScript: []
   lBasketSL: []

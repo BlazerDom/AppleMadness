@@ -129,7 +129,7 @@ MonoBehaviour:
   redAppleChance: 0.2
   HealAppleChance: 0.06
   badAppleChance: 0.03
-  resurectAppleChance: 0.1
+  resurectAppleChance: 0.5
   greenAppleSound:
   - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
   - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}

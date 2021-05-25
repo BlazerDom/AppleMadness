@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class HighScore : MonoBehaviour
 {
     public static RectTransform ScorePanelRectT;
+    public string hsLevel = "LevelOneHighScore";
+    public string textLevel = $"Level 1 High Score: {score}";
     private void Awake()
     {
-        if (PlayerPrefs.HasKey("HighScore"))
+        if (PlayerPrefs.HasKey(key: hsLevel))
         {
-            score = PlayerPrefs.GetInt("HighScore");
+            score = PlayerPrefs.GetInt(key: hsLevel);
         }
 
-        PlayerPrefs.SetInt("HighScore", score);
+        PlayerPrefs.SetInt(key: hsLevel, score);
     }
 
     static public int score = 1000;
@@ -21,11 +23,11 @@ public class HighScore : MonoBehaviour
     private void Update()
     {
         Text gt = this.GetComponent<Text>();
-        gt.text = $"High Score: {score}";
+        gt.text = textLevel;
 
-        if(score > PlayerPrefs.GetInt("HighScore"))
+        if(score > PlayerPrefs.GetInt(key: hsLevel))
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            PlayerPrefs.SetInt(key: hsLevel, score);
         }
     }
 

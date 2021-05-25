@@ -222,7 +222,7 @@ RectTransform:
   - {fileID: 1946011922}
   - {fileID: 1747707252}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -685,8 +685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb546f922ef89e40b80944f3cacb972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hsLevel: LevelOneHighScore
-  textLevel: 'Level 1 High Score: 1000'
 --- !u!1001 &1453179549058323630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654077829991220490, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3654077829991220490, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_LocalPosition.x
@@ -835,14 +833,6 @@ PrefabInstance:
     - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: appleMinVel
       value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
-      propertyPath: scoreDiffForMax
-      value: 15000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
-      propertyPath: scoreDiffForMin
-      value: 15000
       objectReference: {fileID: 0}
     - target: {fileID: 8341125281464909884, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_RootOrder
