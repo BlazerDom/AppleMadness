@@ -20,6 +20,7 @@ public class ApplePicker : MonoBehaviour
     public float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
     public float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
     public float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
+    public float appleBounce = 100f;
 
     public List<GameObject> lBaskets;
     public List<Basket> lScript;
@@ -110,7 +111,7 @@ public class ApplePicker : MonoBehaviour
     public void BasketCreator(int i)
     {
         GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
-        GameObject canvas = GameObject.Find("FirstCanvas");
+        GameObject canvas = GameObject.Find("InterfaceCanvas");
         Slider basketSL = Instantiate<Slider>(basketSliderPrefab, canvas.transform);
         basketSL = basketSL.GetComponent<Slider>();
 

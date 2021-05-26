@@ -17,6 +17,7 @@ public class AppleSpawner : MonoBehaviour
     public float velScaleMin = -0.2f;
     public float velScaleMax = 1f;
     private float dirrection = 0;
+    public bool gravityForApple = true;
 
     public int scoreDiffForMax = 10000;
     public int scoreDiffForMin = 10000;
@@ -101,6 +102,7 @@ public class AppleSpawner : MonoBehaviour
             thatAppleGO.transform.parent = leavesSpawnerGO[spawnPointIndex].transform;
 
             appleRB = thatAppleGO.GetComponent<Rigidbody>();
+            appleRB.useGravity = gravityForApple;
 
             StartCoroutine(WaitForApple(thatAppleGO, appleRB, dirrection, 2.2f / treeRotSpeed));            
         }

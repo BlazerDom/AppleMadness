@@ -45,6 +45,7 @@ public class Apple : MonoBehaviour
         healAppleChance = ap.healAppleChance;
         badAppleChance = ap.badAppleChance;
         resurectAppleChance = ap.resurectAppleChance;
+        bounce = ap.appleBounce;
 
 
         rb = GetComponent<Rigidbody>();
