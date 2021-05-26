@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Scene_ApplePicker_2.unity
     guid: 6e49d8585e9bbb2489d76f6657b03a69
+  - enabled: 1
+    path: Assets/Scenes/_Scene_ApplePicker_3.unity
+    guid: 603dc97b0fe7e2f4fae3b3d042e64005
   m_configObjects: {}

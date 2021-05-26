@@ -829,6 +829,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InterfaceCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2291638140952364089, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291638140952364089, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19.800049
+      objectReference: {fileID: 0}
     - target: {fileID: 2291638141265949362, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
       propertyPath: m_Text
       value: 'Level 4
@@ -944,6 +952,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4492397233900117289, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_Text
+      value: "Description: \n\nApple birth rate increased by 40%\r\n\nRed apple drop
+        chance increased by 50%\r\n\nGravity OFF"
+      objectReference: {fileID: 0}
     - target: {fileID: 5224252102245466997, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: hsLevel
       value: Level_4_HighScore
@@ -992,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 5074988317678018689, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6a3d793644008df4488c508114de8ea5, type: 2}
+      objectReference: {fileID: 2100000, guid: efe0f0465cf89c74d9cb563c3caa3c2f, type: 2}
     - target: {fileID: 8341125281464909884, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1056,6 +1069,6 @@ PrefabInstance:
     - target: {fileID: 9152886481826773589, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6b41e681389fad04ca894a660f7f6139, type: 2}
+      objectReference: {fileID: 2100000, guid: 9866723649a0ca042ac2ba986b260214, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}

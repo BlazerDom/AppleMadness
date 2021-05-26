@@ -192,11 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280eb1d4db536044a8a41001f12a5e09, type: 3}
---- !u!1 &433806223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3654077830833466111, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
-  m_PrefabInstance: {fileID: 3654077830719746416}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &570046381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,6 +286,14 @@ PrefabInstance:
     - target: {fileID: 2291638140345781363, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
       propertyPath: m_Name
       value: InterfaceCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291638140952364089, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291638140952364089, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19.800049
       objectReference: {fileID: 0}
     - target: {fileID: 2291638141265949362, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
       propertyPath: m_Text
@@ -669,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: menu
       value: 
-      objectReference: {fileID: 433806223}
+      objectReference: {fileID: 3654077830719746417}
     - target: {fileID: 1453179549524365587, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -751,6 +754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 3654077829991220487, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3654077829991220490, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -797,7 +804,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654077830833466111, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4492397233900117289, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_Text
+      value: 'Description:
+
+
+        Apple birth rate increased by 20%
+
+
+        All
+        apples available'
       objectReference: {fileID: 0}
     - target: {fileID: 5224252102245466997, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: hsLevel
@@ -805,6 +823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+--- !u!1 &3654077830719746417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3654077829991220487, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+  m_PrefabInstance: {fileID: 3654077830719746416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6430857233236200135
 PrefabInstance:
   m_ObjectHideFlags: 0
