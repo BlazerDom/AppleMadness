@@ -837,6 +837,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 433806223}
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
+      propertyPath: basketStretch
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: badAppleChance
       value: 0.3
       objectReference: {fileID: 0}

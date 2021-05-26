@@ -126,10 +126,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fcd06ea0527421445961417830c24662, type: 2}
   goodAppleGO: {fileID: 3013072381827453246}
   badAppleGO: {fileID: 18402452672729820}
-  redAppleChance: 0.2
-  HealAppleChance: 0.06
-  badAppleChance: 0.03
-  resurectAppleChance: 0.5
   greenAppleSound:
   - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
   - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}
@@ -313,7 +309,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.7
@@ -335,7 +331,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 0.78431374}
-      key1: {r: 1, g: 1, b: 1, a: 0.39215687}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0.83921576, g: 0, b: 0, a: 1}
       key3: {r: 0.83921576, g: 0, b: 0, a: 0}
       key4: {r: 0.83921576, g: 0, b: 0, a: 0}
