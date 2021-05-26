@@ -192,11 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280eb1d4db536044a8a41001f12a5e09, type: 3}
---- !u!1 &433806223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3654077830833466111, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
-  m_PrefabInstance: {fileID: 3654077830719746416}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &576936333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,6 +449,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 34.201, y: -7.623, z: 17.414}
+--- !u!1 &1528626800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3654077829991220487, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+  m_PrefabInstance: {fileID: 3654077830719746416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1716466392 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1453179549524365586, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
+  m_PrefabInstance: {fileID: 1453179549058323630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1929055685
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: menu
       value: 
-      objectReference: {fileID: 433806223}
+      objectReference: {fileID: 1528626800}
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: appleBounce
       value: 700
@@ -851,6 +856,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888144, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0389
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888144, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0389
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888144, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0389
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888144, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888144, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829942888147, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1716466392}
+    - target: {fileID: 3654077829942888175, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_Name
+      value: CanvasMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 3654077829942888175, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -858,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 3654077829991220487, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_Name
       value: EventSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654077829991220487, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3654077829991220490, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_RootOrder
@@ -905,11 +942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654077830833466111, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5224252102245466997, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
       propertyPath: hsLevel
-      value: Level_3_HighScore
+      value: Level_4_HighScore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeaec5f22849e3e4ca28d2a8fbe54572, type: 3}
