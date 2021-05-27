@@ -31,7 +31,7 @@ public class AppleSpawner : MonoBehaviour
     void Start()
     {
         audioSorce = GetComponent<AudioSource>();
-        rollingAnim = GetComponent<Animator>();
+        rollingAnim = GetComponentInChildren<Animator>();
         rollingAnim.speed = treeRotSpeed;
         rollingAnim.Play("Rolling", -1, 0.5f);
         leavesSpawnerGO = GameObject.FindGameObjectsWithTag("AppleSpawner");
@@ -64,7 +64,7 @@ public class AppleSpawner : MonoBehaviour
 
     }
 
-    private void Event_SpawnAppleRight()
+    public void Event_SpawnAppleRight()
     {
         if(costil == 1)
         {
@@ -77,7 +77,7 @@ public class AppleSpawner : MonoBehaviour
         }
     }
 
-    private void Event_SpawnAppleLeft()
+    public void Event_SpawnAppleLeft()
     {
         if(costil == 0)
         {

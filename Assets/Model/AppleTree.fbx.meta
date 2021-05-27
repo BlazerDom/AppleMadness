@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: -392775870743515681
     second: Armature|Rolling
+  - first:
+      74: 4696533208819410028
+    second: Opa_Anim
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -81,11 +84,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 30
     - serializedVersion: 16
-      name: Armature|Rolling
-      takeName: Armature|Rolling
+      name: Opa_Anim
+      takeName: Opa_Anim
       internalID: 0
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
