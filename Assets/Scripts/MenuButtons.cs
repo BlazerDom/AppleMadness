@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class MenuButtons : MonoBehaviour
     public void ResetScore()
     {
         HighScore.score = 1000;
-        PlayerPrefs.SetInt(key: hsLevel, 1000);
+        for(int i = 0; i < 10; i++)
+        PlayerPrefs.SetInt(key: hsLevel + $"_{i}", 1000);
     }
 
     public void ChangeLevelButton()
@@ -61,5 +63,11 @@ public class MenuButtons : MonoBehaviour
     public void LoadLevelPressed(int i)
     {
         SceneManager.LoadScene($"_Scene_ApplePicker_{i -= 1}");
+    }
+    
+    public void EnterName()
+    {
+        InputField ifCharName = gameObject.GetComponent<InputField>();
+        PlayerPrefs.SetString("PlayerName", ifCharName.text);
     }
 }

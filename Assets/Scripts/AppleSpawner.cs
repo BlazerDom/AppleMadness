@@ -72,6 +72,8 @@ public class AppleSpawner : MonoBehaviour
             int i = Random.Range(0, treeOpSounds.Length);
             AppleCreator(velScaleMin, velScaleMax);
             rollingAnim.SetFloat("Dirrection", 1);
+            if (i < 3) rollingAnim.Play("OpaState", 1, 0);
+            else rollingAnim.Play("OpState", 1, 0);
             audioSorce.pitch = Random.Range(0.9f, 1.1f);
             audioSorce.PlayOneShot(treeOpSounds[i]);
         }
@@ -85,6 +87,9 @@ public class AppleSpawner : MonoBehaviour
             int i = Random.Range(0, treeOpSounds.Length);
             AppleCreator(-velScaleMax, -velScaleMin);
             rollingAnim.SetFloat("Dirrection", -1);
+            rollingAnim.SetLayerWeight(1, 1f);
+            if (i < 3) rollingAnim.Play("OpaState", 1, 0);
+            else rollingAnim.Play("OpState", 1, 0);
             audioSorce.pitch = Random.Range(0.9f, 1.1f);
             audioSorce.PlayOneShot(treeOpSounds[i]);
         }

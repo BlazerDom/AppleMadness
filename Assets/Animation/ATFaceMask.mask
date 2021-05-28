@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ATFaceMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.002
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.002/BranchCentr.002_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.003
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.003/BranchCentr.003_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.004
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.004/BranchCentr.004_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.005
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.005/BranchCentr.005_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.006
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.006/BranchCentr.006_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.007
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.007/BranchCentr.007_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.008
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.008/BranchCentr.008_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.009
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.009/BranchCentr.009_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.011
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.011/BranchCentr.011_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.012
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.012/BranchCentr.012_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.013
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.013/BranchCentr.013_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.014
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.014/BranchCentr.014_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.015
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.015/BranchCentr.015_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.016
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.016/BranchCentr.016_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.017
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.017/BranchCentr.017_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.018
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.018/BranchCentr.018_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.019
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchCentr/BranchCentr.019/BranchCentr.019_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.002
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.002/BranchFront.002_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.003
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.003/BranchFront.003_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.004
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.004/BranchFront.004_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.005
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.005/BranchFront.005_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.006
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.006/BranchFront.006_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.007
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.007/BranchFront.007_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.008
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.008/BranchFront.008_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.009
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.009/BranchFront.009_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.010
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.010/BranchFront.010_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.011
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.011/BranchFront.011_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.012
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.012/BranchFront.012_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.013
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.013/BranchFront.013_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.014
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.014/BranchFront.014_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.015
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchFront/BranchFront.015/BranchFront.015_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.002
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.002/BranchLeft.002_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.003
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.003/BranchLeft.003_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.004
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.004/BranchLeft.004_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.005
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.005/BranchLeft.005_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.006
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.006/BranchLeft.006_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.007
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.007/BranchLeft.007_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.008
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.008/BranchLeft.008_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.009
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.009/BranchLeft.009_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.010
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.010/BranchLeft.010_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.011
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.011/BranchLeft.011_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.012
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.012/BranchLeft.012_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.013
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.013/BranchLeft.013_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.014
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.014/BranchLeft.014_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.015
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.015/BranchLeft.015_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.017
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.017/BranchLeft.017_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.018
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.018/BranchLeft.018_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.019
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.019/BranchLeft.019_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.020
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.020/BranchLeft.020_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.021
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.021/BranchLeft.021_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.022
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.022/BranchLeft.022_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.023
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.023/BranchLeft.023_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.024
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.024/BranchLeft.024_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.025
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.025/BranchLeft.025_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.026
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchLeft/BranchLeft.026/BranchLeft.026_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.002
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.002/BranchRight.002_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.003
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.003/BranchRight.003_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.004
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.004/BranchRight.004_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.005
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.005/BranchRight.005_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.006
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.006/BranchRight.006_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.007
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.007/BranchRight.007_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.008
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.008/BranchRight.008_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.009
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.009/BranchRight.009_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.010
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.010/BranchRight.010_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.011
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.011/BranchRight.011_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.012
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.012/BranchRight.012_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.013
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.013/BranchRight.013_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.014
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.014/BranchRight.014_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.015
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.03/Trunk.04/BranchRight/BranchRight.015/BranchRight.015_end
+    m_Weight: 0
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.005
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.005/Trunk.006
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.005/Trunk.006/Trunk.007
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.005/Trunk.006/Trunk.007/Trunk.008
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.005/Trunk.006/Trunk.007/Trunk.008/Trunk.008_end
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.009
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.009/Trunk.010
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.009/Trunk.010/Trunk.011
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.009/Trunk.010/Trunk.011/Trunk.012
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.004/Trunk.009/Trunk.010/Trunk.011/Trunk.012/Trunk.012_end
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.014
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.014/Trunk.015
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.014/Trunk.015/Trunk.016
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.014/Trunk.015/Trunk.016/Trunk.017
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.014/Trunk.015/Trunk.016/Trunk.017/Trunk.017_end
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.018
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.018/Trunk.019
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.018/Trunk.019/Trunk.020
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.018/Trunk.019/Trunk.020/Trunk.021
+    m_Weight: 1
+  - m_Path: Armature/MainTrunk/Trunk.01/Trunk.02/Trunk.013/Trunk.018/Trunk.019/Trunk.020/Trunk.021/Trunk.021_end
+    m_Weight: 1
+  - m_Path: Leaves
+    m_Weight: 0
+  - m_Path: Trunk
+    m_Weight: 0

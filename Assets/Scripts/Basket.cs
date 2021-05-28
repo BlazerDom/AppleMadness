@@ -13,7 +13,7 @@ public class Basket : MonoBehaviour
 
     public int basketHP = 10;
 
-    public Text scoreGT;
+    public static Text scoreGT;
 
     public Vector3 pos = Vector3.zero;
 
