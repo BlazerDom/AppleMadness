@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class MenuButtons : MonoBehaviour
 {
     private bool musicToggle = true;
     public GameObject menu;
     public GameObject levelsMenu;
+    public GameObject leaderboard;
+    public InputField inputPlayerName;
     public string hsLevel = "Level_1_HighScore";
+    [SerializeField] private string id = Guid.NewGuid().ToString();
 
     public void StartButton()
     {
@@ -39,7 +44,7 @@ public class MenuButtons : MonoBehaviour
     {
         HighScore.score = 1000;
         for(int i = 0; i < 10; i++)
-        PlayerPrefs.SetInt(key: hsLevel + $"_{i}", 1000);
+        PlayerPrefs.SetString(key: hsLevel + $"_{i}", "ID:0;Name:Player;Score:1000;");
     }
 
     public void ChangeLevelButton()
@@ -51,10 +56,21 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
+    public void LeaderboardButton()
+    {
+        if (menu.activeSelf)
+        {
+            menu.SetActive(false);
+            leaderboard.SetActive(true);
+        }
+    }
+
+
     public void BackToMenu()
     {
-        if (levelsMenu.activeSelf)
+        if (!menu.activeSelf)
         {
+            leaderboard.SetActive(false);
             levelsMenu.SetActive(false);
             menu.SetActive(true);
         }
@@ -67,7 +83,9 @@ public class MenuButtons : MonoBehaviour
     
     public void EnterName()
     {
-        InputField ifCharName = gameObject.GetComponent<InputField>();
-        PlayerPrefs.SetString("PlayerName", ifCharName.text);
+
+        //inputPlayerName = GetComponent<InputField>();
+        id = Guid.NewGuid().ToString();
+        PlayerPrefs.SetString("PlayerNameID", $"ID:{id};Name:{inputPlayerName.text}");
     }
 }

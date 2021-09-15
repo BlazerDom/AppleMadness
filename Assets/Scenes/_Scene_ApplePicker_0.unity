@@ -651,6 +651,10 @@ PrefabInstance:
       propertyPath: hsLevel
       value: Level_1_HighScore
       objectReference: {fileID: 0}
+    - target: {fileID: 2291638141383469144, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
+      propertyPath: playerNameID
+      value: ID:1;Name:Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64bfc3846c817c143bc60ecf467c5dd5, type: 3}
 --- !u!1001 &1453179549058323630
