@@ -14,6 +14,7 @@ public class HighScore : MonoBehaviour
     public string hsLevel = "Level_1_HighScore";
     public string textLevel = "Level 1";
     public string playerNameID = "ID:0;Name:Player";
+    private string playerNameIDBase = "ID:0;Name:Player";
 
     public static bool updateLBOnce = true;
     private int secondScore = 0;
@@ -67,7 +68,7 @@ public class HighScore : MonoBehaviour
 
 
 
-        CreateLeadersList();
+        CreateLeadersList(0);
 
         if (PlayerPrefs.HasKey(key: hsLevel + $"_{0}"))
         {
@@ -86,7 +87,6 @@ public class HighScore : MonoBehaviour
 
         if (updateLBOnce)
         {
-            updateLBOnce = false;
             UpdateLeadersList();
         }
 
@@ -106,16 +106,18 @@ public class HighScore : MonoBehaviour
         ScorePanelRectT.position = new Vector2(x, y);    
     }
 
-    public void CreateLeadersList()
+    public void CreateLeadersList(int iLoops)
     {
-        for (int i = 0; i < 11; i++)
+        playerNameID = PlayerPrefs.GetString("PlayerNameID");
+
+        for (int i = iLoops;  i < 11; i++)
         {
 
             if (PlayerPrefs.HasKey(key: hsLevel + $"_{i}"))
             {
                 if(PlayerPrefs.GetString(key: hsLevel + $"_{i}") == "")
                 {
-                    levelLeaders.Add(playerNameID + $";Score:1000");
+                    levelLeaders.Add(playerNameIDBase + $";Score:1000");
                     PlayerPrefs.SetString(key: hsLevel + $"_{i}", levelLeaders[i]);
                 }
                 levelLeaders.Add(PlayerPrefs.GetString(key: hsLevel + $"_{i}"));
@@ -123,14 +125,18 @@ public class HighScore : MonoBehaviour
             }
             if (!PlayerPrefs.HasKey(key: hsLevel + $"_{i}"))
             {
-                levelLeaders.Add(playerNameID + $";Score:1000");
+                levelLeaders.Add(playerNameIDBase + $";Score:1000");
                 PlayerPrefs.SetString(key: hsLevel + $"_{i}", levelLeaders[i]);
             }
             if (i == 10)
             {
+                for (int j = 11; j < levelLeaders.Count;)
+                {
+                    levelLeaders.RemoveAt(levelLeaders.Count - 1);
+                }              
                 levelLeaders[i] = playerNameID + $";Score:1000";
                 PlayerPrefs.SetString(key: hsLevel + $"_{i}", levelLeaders[i]);
-                levelLeaders = levelLeaders.OrderByDescending(x => x.Split(";".ToCharArray()).Where(a => a.StartsWith("Score:")).Select(a => a.Substring(a.IndexOf(":") + 1)).Single()).ToList();
+                //levelLeaders = levelLeaders.OrderByDescending(x => x.Split(";".ToCharArray()).Where(a => a.StartsWith("Score:")).Select(a => a.Substring(a.IndexOf(":") + 1)).Single()).ToList();
             }
         }
     }
@@ -140,9 +146,10 @@ public class HighScore : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayerNameID")) playerNameID = PlayerPrefs.GetString("PlayerNameID");
         secondScore = int.Parse(Basket.scoreGT.text);
         var a = levelLeaders[index].Split(";".ToCharArray());
+        var b = playerNameID.Split(";".ToCharArray());
         var score = int.Parse(a.Where(x => x.StartsWith("Score:")).Select(a => a.Substring(a.IndexOf(":") + 1)).Single());
-        var id = a.Where(x => x.StartsWith("ID:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
-        var name = a.Where(x => x.StartsWith("Name:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+        var id = b.Where(x => x.StartsWith("ID:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+        var name = b.Where(x => x.StartsWith("Name:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
 
         //if (secondScore > score)
         //{
@@ -165,6 +172,7 @@ public class HighScore : MonoBehaviour
                 PlayerPrefs.SetString(key: hsLevel + $"_{i}", levelLeaders[i]);
             }
         //}
+        updateLBOnce = false;
     }
 
     //public void SortLeaderBoards()

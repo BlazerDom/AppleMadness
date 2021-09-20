@@ -155,6 +155,7 @@ public class Basket : MonoBehaviour
         int i = apPicker.lScript.Count - 1;
         if (i == 0)
         {
+            apPicker.gameOver = true;
             apPicker.MenuOnOff();
         }
         if (apPicker.lBaskets[i] != null)

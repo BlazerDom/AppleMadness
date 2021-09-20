@@ -34,12 +34,19 @@ public class ApplePicker : MonoBehaviour
 
     public KeyCode mainMenu;
 
+    private GameObject startButton;
+    private bool firstLaunch = true;
     // Start is called before the first frame update
     void Awake()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         Text scoreGT = scoreGO.GetComponent<Text>();
         scoreGT.text = "0";
+
+        GameObject a = menu.transform.GetChild(0).gameObject;
+        GameObject b = a.transform.GetChild(0).gameObject;
+        startButton = b.transform.GetChild(1).gameObject;
+
 
         lBaskets = new List<GameObject>();
         lScript = new List<Basket>();
@@ -95,17 +102,38 @@ public class ApplePicker : MonoBehaviour
     }
     public void MenuOnOff()
     {
-        menu.gameObject.SetActive(!menu.gameObject.activeSelf);
-
-        if (menu.gameObject.activeSelf)
+        if (gameOver)
         {
             Time.timeScale = 0;
+            menu.gameObject.SetActive(true);
+            MenuButtons mbRef = menu.GetComponentInChildren<MenuButtons>();
+            mbRef.LeaderboardButton();
+            startButton.SetActive(false);
         }
         else
         {
-            Time.timeScale = 1;
-        }
-        
+            menu.gameObject.SetActive(!menu.gameObject.activeSelf);
+
+            if (menu.gameObject.activeSelf)
+            {
+                Time.timeScale = 0;
+                if (lBaskets != null && !firstLaunch)
+                {
+                    Text t = startButton.GetComponentInChildren<Text>();
+                    t.text = "Continue";
+                }
+                else
+                {
+                    Text t = startButton.GetComponentInChildren<Text>();
+                    t.text = "Start!";
+                    firstLaunch = false;
+                }
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }        
     }
 
     public void BasketCreator(int i)

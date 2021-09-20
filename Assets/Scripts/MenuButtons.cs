@@ -13,12 +13,28 @@ public class MenuButtons : MonoBehaviour
     public GameObject levelsMenu;
     public GameObject leaderboard;
     public InputField inputPlayerName;
+    public GameObject highScore;
+
+    private HighScore hsRef;
+    private HSLeaderboard lbRef;
+
     public string hsLevel = "Level_1_HighScore";
     [SerializeField] private string id = Guid.NewGuid().ToString();
 
+    private void Start()
+    {
+        hsRef = highScore.GetComponent<HighScore>();
+        lbRef = leaderboard.GetComponent<HSLeaderboard>();
+
+        var a = PlayerPrefs.GetString("PlayerNameID").Split(";".ToCharArray());
+        var name = a.Where(x => x.StartsWith("Name:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+
+        inputPlayerName.text = name;
+    }
     public void StartButton()
     {
         ApplePicker ap = Camera.main.GetComponent<ApplePicker>();
+        ap.gameOver = false;
         ap.MenuOnOff();
     }
     public void RestartPressed()
@@ -44,7 +60,13 @@ public class MenuButtons : MonoBehaviour
     {
         HighScore.score = 1000;
         for(int i = 0; i < 10; i++)
-        PlayerPrefs.SetString(key: hsLevel + $"_{i}", "ID:0;Name:Player;Score:1000;");
+        {
+            hsRef.levelLeaders[i] = "ID:0;Name:Player;Score:1000;";
+            PlayerPrefs.SetString(key: hsLevel + $"_{i}", "ID:0;Name:Player;Score:1000;");
+        }
+        hsRef.CreateLeadersList(0);
+        lbRef.ScoreUpdate();
+        hsRef.UpdateLeadersList();
     }
 
     public void ChangeLevelButton()
@@ -62,6 +84,12 @@ public class MenuButtons : MonoBehaviour
         {
             menu.SetActive(false);
             leaderboard.SetActive(true);
+        }
+        if (leaderboard.activeSelf)
+        {
+            //HSLeaderboard lboardScriptRef = leaderboard.GetComponent<HSLeaderboard>();
+            hsRef.UpdateLeadersList();
+            lbRef.ScoreUpdate();
         }
     }
 
@@ -87,5 +115,8 @@ public class MenuButtons : MonoBehaviour
         //inputPlayerName = GetComponent<InputField>();
         id = Guid.NewGuid().ToString();
         PlayerPrefs.SetString("PlayerNameID", $"ID:{id};Name:{inputPlayerName.text}");
+        hsRef.CreateLeadersList(10);
+        hsRef.UpdateLeadersList();
+        lbRef.ScoreUpdate();
     }
 }
