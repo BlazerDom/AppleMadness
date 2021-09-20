@@ -82,15 +82,19 @@ public class ApplePicker : MonoBehaviour
     {
         int i = lScript.Count - 1;
         MeshRenderer mr = apple.GetComponentInChildren<MeshRenderer>();
-        Rigidbody rb = apple.GetComponent<Rigidbody>();        
+        Rigidbody rb = apple.GetComponent<Rigidbody>();
+        Apple a = apple.GetComponent<Apple>();
         rb.isKinematic = true;
         mr.enabled = false;
 
         Destroy(apple, 1.1f);
         lScript[i].basketHP -= damage;
         lBasketSL[i].value = (float)lScript[i].basketHP / (float)basketHP;
-        successCatchs = 0;
-        scoreMultipler = 1;
+        if (!a.badApple)
+        {
+            successCatchs = 0;
+            scoreMultipler = 1;
+        }
     }
 
     public void BasketHeal(int heal)
