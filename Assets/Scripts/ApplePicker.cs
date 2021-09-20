@@ -63,8 +63,6 @@ public class ApplePicker : MonoBehaviour
 
     public void Start()
     {
-        
-        Screen.orientation = ScreenOrientation.Landscape;
         if (Camera.main.aspect > 1.6f) Camera.main.orthographicSize = 13;
         if (Camera.main.aspect <= 1.6f) Camera.main.orthographicSize = 15.3f;
         MenuOnOff();
