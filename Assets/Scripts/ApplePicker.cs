@@ -36,6 +36,8 @@ public class ApplePicker : MonoBehaviour
 
     private GameObject startButton;
     private bool firstLaunch = true;
+
+    public int scoreMultipler = 1;
     // Start is called before the first frame update
     void Awake()
     {
@@ -86,6 +88,7 @@ public class ApplePicker : MonoBehaviour
         Destroy(apple, 1.1f);
         lScript[i].basketHP -= damage;
         lBasketSL[i].value = (float)lScript[i].basketHP / (float)basketHP;
+        scoreMultipler = 1;
     }
 
     public void BasketHeal(int heal)

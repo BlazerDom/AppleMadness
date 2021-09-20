@@ -13,6 +13,8 @@ public class Basket : MonoBehaviour
 
     public int basketHP = 10;
 
+    private int successCatchs = 0;
+
     public static Text scoreGT;
 
     public Vector3 pos = Vector3.zero;
@@ -89,6 +91,13 @@ public class Basket : MonoBehaviour
     {
         apPicker = Camera.main.GetComponent<ApplePicker>();
 
+        successCatchs += 1;
+        if (successCatchs == 4) apPicker.scoreMultipler = 2;
+        if (successCatchs == 8) apPicker.scoreMultipler = 4;
+        if (successCatchs == 16) apPicker.scoreMultipler = 8;
+
+
+
         if (other.gameObject != null)
         {
             GameObject apple = other.gameObject;
@@ -99,7 +108,7 @@ public class Basket : MonoBehaviour
             {
                 audioSource.PlayOneShot(catchSounds[Random.Range(0, catchSounds.Length)]);
                 score = int.Parse(scoreGT.text);
-                score += aScript.cost;
+                score += aScript.cost * apPicker.scoreMultipler;
                 scoreGT.text = score.ToString();
 
 
@@ -107,8 +116,11 @@ public class Basket : MonoBehaviour
 
                 if (aScript.badApple)
                 {
+                    successCatchs = 0;
+                    apPicker.scoreMultipler = 1;
                     DestroyBasket();
                 }
+                
 
                 if (aScript.heal > 0)
                 {
