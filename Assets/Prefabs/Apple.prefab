@@ -126,6 +126,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fcd06ea0527421445961417830c24662, type: 2}
   goodAppleGO: {fileID: 3013072381827453246}
   badAppleGO: {fileID: 18402452672729820}
+  seedGO: {fileID: 6665805437351400695, guid: e8e166571ce131c498b295bd7b683a58, type: 3}
   greenAppleSound:
   - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
   - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}

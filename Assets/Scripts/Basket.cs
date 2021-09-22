@@ -94,6 +94,11 @@ public class Basket : MonoBehaviour
             GameObject apple = other.gameObject;
             Apple aScript = apple.GetComponent<Apple>();
             string t = apple.tag;
+
+            if (t == "Seed")
+            {
+                apPicker.SeedDamageBasket(apple, 1);
+            }
         
             if (t == "Apple")
             {

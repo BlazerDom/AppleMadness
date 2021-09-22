@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public static float bottomY = -18f;
+    public static float bottomY = -14f;
 
     public int cost = 100;
 
@@ -18,9 +18,12 @@ public class Apple : MonoBehaviour
 
     public float bounce = 100f;
 
+    public float seedForce = 75f;
+
     public Material[] appleMaterials;
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
+    public GameObject seedGO;
 
     private float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
     private float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
@@ -37,6 +40,7 @@ public class Apple : MonoBehaviour
     private AudioSource audioSource;
     private int soundPlayInt = 0;
     private bool death = false;
+    private Quaternion rot = new Quaternion(0f, 0f, 0f, 1f);
 
     public void Start()
     {
@@ -90,7 +94,7 @@ public class Apple : MonoBehaviour
             cost = 600;
             mr.material = appleMaterials[2];
             heal = 6;
-            damage = 0;
+            damage = 1;
             audioSource.clip = healAppleSound[Random.Range(0, healAppleSound.Length)];
             audioSource.volume = 0.8f;
             audioSource.priority = 121;
@@ -116,6 +120,30 @@ public class Apple : MonoBehaviour
     {
         if (transform.position.y < bottomY && !death)
         {
+            if(damage != 0)
+            {
+                Vector3 pos = transform.position;
+                Vector3 rotAngle = new Vector3(0f, 0f, 90f / (damage * 2));
+                rot.eulerAngles = new Vector3(0f, 0f, 303.75f + rotAngle.z);
+                for (int i = 0; i < damage * 2; i++)
+                {
+                    //if (i < damage / 2) forceY *= 1.5f;
+
+                    //if (i > damage / 2) forceY /= 1.5f;
+                    GameObject s = Instantiate(seedGO, pos, rot);
+                    s.transform.parent = null;
+
+                    s.transform.rotation = rot;
+                    //rot.eulerAngles = s.transform.rotation.eulerAngles + new Vector3 (0f, 0f, 90f) / (damage * 2);
+                    //rot = Quaternion.AngleAxis(90f / (damage * 2), s.transform.forward);
+                    s.transform.Rotate(rotAngle * i);
+                    Rigidbody rs = s.GetComponent<Rigidbody>();
+                    rs.AddForce(rs.transform.up * seedForce);
+                    //float j = 640f / damage;
+                    //forceX += j;
+                }
+
+            }
             death = true;
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed(this.gameObject, damage);

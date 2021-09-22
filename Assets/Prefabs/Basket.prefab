@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1658684489338313459}
   - component: {fileID: 3561879956856214176}
   - component: {fileID: 2886977427433575174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,6 @@ MonoBehaviour:
   speed: 10
   alpha: 1
   basketHP: 10
-  scoreGT: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
   catchSounds:
   - {fileID: 8300000, guid: 1dda1d983f033a0438f7b87f044da5c8, type: 3}
@@ -127,6 +126,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0afd0c1b54632bc4c84dc2eec16536b5, type: 3}
   - {fileID: 8300000, guid: 2939c7272c2a5854292dd7697630ef11, type: 3}
   - {fileID: 8300000, guid: b79f99863a4c4164fa171533a89570b9, type: 3}
+  standartScale: {x: 0, y: 0, z: 0}
+  improveBasket: 0
 --- !u!82 &2886977427433575174
 AudioSource:
   m_ObjectHideFlags: 0
