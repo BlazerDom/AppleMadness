@@ -29,6 +29,7 @@ public class Apple : MonoBehaviour
     private float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
     private float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
     private float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
+    private float jumpingAppleChance = Mathf.Clamp(.02f, 0f, 1f);
 
     public AudioClip[] greenAppleSound;
     public AudioClip[] redAppleSound;
@@ -41,6 +42,7 @@ public class Apple : MonoBehaviour
     private int soundPlayInt = 0;
     private bool death = false;
     private Quaternion rot = new Quaternion(0f, 0f, 0f, 1f);
+    private bool isJumping = false;
 
     public void Start()
     {
@@ -49,6 +51,7 @@ public class Apple : MonoBehaviour
         healAppleChance = ap.healAppleChance;
         badAppleChance = ap.badAppleChance;
         resurectAppleChance = ap.resurectAppleChance;
+        jumpingAppleChance = ap.jumpingAppleChance;
         bounce = ap.appleBounce;
 
 
@@ -114,6 +117,16 @@ public class Apple : MonoBehaviour
             TrailRenderer tr = gameObject.GetComponent<TrailRenderer>();
             tr.enabled = true;
         }
+
+        //add Jumping Apple chances
+        j += resurectAppleChance;
+        if(i != 0 && i > j && i < j + jumpingAppleChance)
+        {
+            cost = 1000;
+            mr.material = appleMaterials[4];
+            damage = 8;
+            Jumping();
+        }
     }
 
     private void Update()
@@ -165,5 +178,18 @@ public class Apple : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         rb.AddForce(other.contacts[0].normal * bounce);
+    }
+
+    private void Jumping()
+    {
+        if (transform.position.y > -10)
+        {
+            float x = Random.Range(-400f, 400f);
+            float y = Random.Range(0f, 220f);
+            float t = Random.Range(0.2f, 0.6f);
+            //Vector2 rc = Random.insideUnitCircle * 400;
+            rb.AddForce(new Vector3(x, y));
+            Invoke("Jumping", t);
+        }
     }
 }

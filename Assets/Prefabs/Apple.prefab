@@ -119,11 +119,13 @@ MonoBehaviour:
   heal: 0
   addBasket: 0
   bounce: 100
+  seedForce: 75
   appleMaterials:
   - {fileID: 2100000, guid: 5fc4a8c37ffd732418b9204329f7d39b, type: 2}
   - {fileID: 2100000, guid: 2a956551783133746b0c18fe22289926, type: 2}
   - {fileID: 2100000, guid: 0fa06894e40c61d44b40296fd3b61f9a, type: 2}
   - {fileID: 2100000, guid: fcd06ea0527421445961417830c24662, type: 2}
+  - {fileID: 2100000, guid: e41a2a29d4877a64493a20be8cee6cfd, type: 2}
   goodAppleGO: {fileID: 3013072381827453246}
   badAppleGO: {fileID: 18402452672729820}
   seedGO: {fileID: 6665805437351400695, guid: e8e166571ce131c498b295bd7b683a58, type: 3}
