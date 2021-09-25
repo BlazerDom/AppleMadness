@@ -107,6 +107,8 @@ MonoBehaviour:
   healAppleChance: 0.06
   badAppleChance: 0.03
   resurectAppleChance: 0.01
+  jumpingAppleChance: 0.02
+  appleBounce: 100
   lBaskets: []
   lScript: []
   lBasketSL: []
@@ -114,6 +116,8 @@ MonoBehaviour:
   menu: {fileID: 0}
   basketSliderPrefab: {fileID: 7802421328071697574, guid: 0df46b86f3848a44baeee40bddbf609f, type: 3}
   mainMenu: 27
+  successCatchs: 0
+  scoreMultipler: 1
 --- !u!82 &1453179549524365585
 AudioSource:
   m_ObjectHideFlags: 0

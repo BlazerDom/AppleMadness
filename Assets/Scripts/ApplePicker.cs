@@ -75,6 +75,8 @@ public class ApplePicker : MonoBehaviour
         {
             MenuOnOff();
         }
+
+        SkyboxRotator();
     }
 
     public void AppleDestroyed(GameObject apple, int damage)
@@ -172,4 +174,8 @@ public class ApplePicker : MonoBehaviour
         basketSL.transform.position -= new Vector3(0, 20 * i);
     }
 
+    public void SkyboxRotator()
+    {
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time);
+    }
 }
