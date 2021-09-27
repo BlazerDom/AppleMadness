@@ -24,6 +24,11 @@ public class Basket : MonoBehaviour
     private ApplePicker apPicker;
     public bool improveBasket = false;
 
+    public Basket()
+    {
+
+    }
+
     private void Start()
     {
         ApplePicker apPicker = Camera.main.GetComponent<ApplePicker>();
