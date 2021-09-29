@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
   using System.Runtime.Serialization.Formatters.Binary;
 
 public class HighScore : MonoBehaviour
@@ -21,7 +22,15 @@ public class HighScore : MonoBehaviour
     private int index = 10;
     private void Awake()
     {
-        if(PlayerPrefs.HasKey("PlayerNameID")) playerNameID = PlayerPrefs.GetString("PlayerNameID");
+        if (PlayerPrefs.HasKey("PlayerNameID"))
+        {
+            playerNameID = PlayerPrefs.GetString("PlayerNameID");
+            var id = Guid.NewGuid().ToString();
+            var a = playerNameID.Split(";".ToCharArray());
+            var n = a.Where(x => x.StartsWith("Name:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+            PlayerPrefs.SetString("PlayerNameID", $"ID:{id};Name:{n}");
+            playerNameID = PlayerPrefs.GetString("PlayerNameID");
+        }
         levelLeaders = new List<string>();
 
         //LevelLeaders = new List<int>();

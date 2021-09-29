@@ -37,12 +37,23 @@ public class HSLeaderboard : MonoBehaviour
             Text n = nameObject.GetComponent<Text>();
             GameObject scoreObject = scoreArray[i].transform.GetChild(2).gameObject;
             Text s = scoreObject.GetComponent<Text>();
+
+            var playerNameID = PlayerPrefs.GetString("PlayerNameID");
+            var b = playerNameID.Split(";".ToCharArray());
             var nameScore = PlayerPrefs.GetString(key: hsLevel + $"_{i}");
             var a = nameScore.Split(";".ToCharArray());
             var score = a.Where(x => x.StartsWith("Score:")).Select(a => a.Substring(a.IndexOf(":") + 1)).Single();
             var name = a.Where(x => x.StartsWith("Name:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+            var idBoard  = a.Where(x => x.StartsWith("ID:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
+            var playerID = b.Where(x => x.StartsWith("ID:")).Select(x => x.Substring(x.IndexOf(":") + 1)).Single();
             n.text = name;
             s.text = score;
+
+            if (idBoard == playerID)
+            {
+                n.color = Color.green;
+                s.color = Color.green;
+            }
         }
 
     }
