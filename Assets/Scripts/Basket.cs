@@ -66,7 +66,7 @@ public class Basket : MonoBehaviour
         //if (accelerometrDir.sqrMagnitude > 1) accelerometrDir.Normalize();
         //accelerometrDir *= Time.deltaTime;
         
-        pos = this.transform.position;
+        pos = transform.position;
         //pos.x = Mathf.Lerp(pos.x, mousePos3D.x, alpha);
         pos.x = Mathf.Lerp(pos.x, inputPos.x, alpha);
         
@@ -88,7 +88,7 @@ public class Basket : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.transform.position = pos;
+        transform.position = pos;
     }
     private void OnTriggerEnter(Collider other)
     {

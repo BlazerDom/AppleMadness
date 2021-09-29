@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1087102803}
-  m_IndirectSpecularColor: {r: 0.37420297, g: 0.68430674, b: 0.8754719, a: 1}
+  m_IndirectSpecularColor: {r: 0.37400892, g: 0.68273765, b: 0.8728922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -670,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 3654077830719746417}
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: basketStretch
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1453179549524365584, guid: 1e3337ed6be51d44ab353bf2c3089ea5, type: 3}
       propertyPath: badAppleChance

@@ -81,7 +81,8 @@ public class ApplePicker : MonoBehaviour
 
     public void AppleDestroyed(GameObject apple, int damage)
     {
-        var i = lScript.LastOrDefault();
+        //int i = lScript.Count - 1;
+        //if (i < 0) return;
         MeshRenderer mr = apple.GetComponentInChildren<MeshRenderer>();
         Rigidbody rb = apple.GetComponent<Rigidbody>();
         Apple a = apple.GetComponent<Apple>();
@@ -106,7 +107,7 @@ public class ApplePicker : MonoBehaviour
         if (i < 0) return;
         Destroy(seed);
         lScript[i].basketHP -= damage;
-        lBasketSL[i].value = lScript[i].basketHP / basketHP;
+        lBasketSL[i].value = lScript[i].basketHP / (float)basketHP;
     }
 
     public void BasketHeal(int heal)
@@ -167,10 +168,18 @@ public class ApplePicker : MonoBehaviour
         lBasketSL.Add(basketSL);
         lBaskets.Add(tBasketGO);
         lScript.Add(tBasketGO.GetComponent<Basket>());
+
         lScript[i].basketHP = basketHP;
         lScript[i].pos = Vector3.zero;
         lScript[i].pos.y = basketBottomY + (basketSpacingY * i);
         tBasketGO.transform.position = lScript[i].pos;
+        if (lBaskets.Count > 1)
+        {
+            var x = lBaskets[i - 1].transform.position.x;
+            var y = lBaskets[i].transform.position.y;
+            var z = lBaskets[i].transform.position.z;
+            lBaskets[i].transform.position = new Vector3(x, y, z);
+        }
         lScript[i].alpha = 1f / (i * basketStretch);
         basketSL.transform.position -= new Vector3(0, 20 * i);
     }

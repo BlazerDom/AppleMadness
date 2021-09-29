@@ -102,7 +102,7 @@ MonoBehaviour:
   basketBottomY: -12
   basketSpacingY: -0.7
   basketHP: 10
-  basketStretch: 18
+  basketStretch: 10
   redAppleChance: 0.2
   healAppleChance: 0.06
   badAppleChance: 0.03
