@@ -481,7 +481,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7309061676480751940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,6 +5078,7 @@ MonoBehaviour:
   - {fileID: 1838456163495879270}
   - {fileID: 1671899229854658894}
   - {fileID: 8743701021956916899}
+  sessionScoreColor: {r: 0.2716979, g: 0.08962262, b: 1, a: 1}
 --- !u!1 &4605247500195679264
 GameObject:
   m_ObjectHideFlags: 0

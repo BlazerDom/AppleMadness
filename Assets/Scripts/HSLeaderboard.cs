@@ -10,6 +10,7 @@ public class HSLeaderboard : MonoBehaviour
     private string hsLevel;
     public GameObject[] scoreArray;
     public static bool checkScore = false;
+    public Color sessionScoreColor;
     //private bool doOnce = true;
 
     public void Awake()
@@ -33,6 +34,8 @@ public class HSLeaderboard : MonoBehaviour
     {
         for (int i = 0; i != scoreArray.Length; i++)
         {
+            GameObject numberObject = scoreArray[i].transform.GetChild(0).gameObject;
+            Text num = numberObject.GetComponent<Text>();
             GameObject nameObject = scoreArray[i].transform.GetChild(1).gameObject;
             Text n = nameObject.GetComponent<Text>();
             GameObject scoreObject = scoreArray[i].transform.GetChild(2).gameObject;
@@ -51,8 +54,9 @@ public class HSLeaderboard : MonoBehaviour
 
             if (idBoard == playerID)
             {
-                n.color = Color.green;
-                s.color = Color.green;
+                num.color = sessionScoreColor;
+                n.color = sessionScoreColor;
+                s.color = sessionScoreColor;
             }
         }
 
