@@ -20,7 +20,10 @@ public class Apple : MonoBehaviour
 
     public float seedForce = 75f;
 
+    public bool gravityField = false;
+
     public Material[] appleMaterials;
+    //public GameObject antiGravityField;
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
     public GameObject seedGO;
@@ -37,15 +40,18 @@ public class Apple : MonoBehaviour
     public AudioClip[] badAppleSound;
     public AudioClip[] resurectAppleSound;
 
-    private Rigidbody rb;
+    private new Rigidbody rigidbody;
+    //private Collider gravityColl;
     private AudioSource audioSource;
     private int soundPlayInt = 0;
     private bool death = false;
     private Quaternion rot = new Quaternion(0f, 0f, 0f, 1f);
     private bool isJumping = false;
+    private float gravityRange = 100;
 
     public void Start()
     {
+        //gravityColl = antiGravityField.GetComponent<Collider>();
         ApplePicker ap = Camera.main.GetComponent<ApplePicker>();
         redAppleChance = ap.redAppleChance;
         healAppleChance = ap.healAppleChance;
@@ -55,7 +61,7 @@ public class Apple : MonoBehaviour
         bounce = ap.appleBounce;
 
 
-        rb = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         gameObject.transform.localScale = Vector3.zero;
         WaitForLaunch();
@@ -127,6 +133,8 @@ public class Apple : MonoBehaviour
             damage = 8;
             Jumping();
         }
+
+        //add AntiGravity Apple chances
     }
 
     private void Update()
@@ -161,13 +169,33 @@ public class Apple : MonoBehaviour
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed(this.gameObject, damage);
         }
-        if (!rb.isKinematic && soundPlayInt == 0)
+        if (!rigidbody.isKinematic && soundPlayInt == 0)
         {
             soundPlayInt = 1;
             audioSource.Play();
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (gravityField)
+        {
+            Collider[] cols = Physics.OverlapSphere(transform.position, gravityRange);
+            List<Rigidbody> rbs = new List<Rigidbody>();
+
+            foreach (Collider c in cols)
+            {
+                Rigidbody rb = c.attachedRigidbody;
+                if (rb != null && rb != rigidbody && !rbs.Contains(rb))
+                {
+                    rbs.Add(rb);
+                    rb.useGravity = false;
+                    Vector3 offset = transform.position - c.transform.position;
+                    rb.AddForce(offset / offset.magnitude * rigidbody.mass);
+                }
+            }
+        }
+    }
     private void WaitForLaunch()
     {
         transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
@@ -177,7 +205,7 @@ public class Apple : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        rb.AddForce(other.contacts[0].normal * bounce);
+        rigidbody.AddForce(other.contacts[0].normal * bounce);
     }
 
     private void Jumping()
@@ -188,8 +216,21 @@ public class Apple : MonoBehaviour
             float y = Random.Range(0f, 220f);
             float t = Random.Range(0.2f, 0.6f);
             //Vector2 rc = Random.insideUnitCircle * 400;
-            rb.AddForce(new Vector3(x, y));
+            rigidbody.AddForce(new Vector3(x, y));
             Invoke("Jumping", t);
         }
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+        
+    //}
+    //private void AntiGravityField(GameObject go)
+    //{
+    //    if (antiGravityField.activeSelf && go.tag == "Apple")
+    //    {
+    //        Apple a = go.GetComponent<Apple>();
+    //        a.rigidbody.useGravity = false;
+    //    }
+    //}
 }
