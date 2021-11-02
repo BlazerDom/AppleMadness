@@ -103,6 +103,7 @@ public class AppleSpawner : MonoBehaviour
             dirrection = Random.Range(minF, maxF);
 
             thatAppleGO = Instantiate<GameObject>(appleGO);
+            thatAppleGO.SetActive(true);
             thatAppleGO.transform.SetPositionAndRotation(leavesSpawnerGO[spawnPointIndex].transform.position, new Quaternion (0,0, Random.Range(-0.1f, 0.1f), 1));
             thatAppleGO.transform.parent = leavesSpawnerGO[spawnPointIndex].transform;
 
