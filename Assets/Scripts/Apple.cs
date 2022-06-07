@@ -46,7 +46,7 @@ public class Apple : MonoBehaviour
     private bool death = false;
     private Quaternion rot = new Quaternion(0f, 0f, 0f, 1f);
     private bool isJumping = false;
-    private float gravityRange = 100;
+    private float gravityRange = 10;
 
     public Apples[] applesArray;
     public void Start()
@@ -135,7 +135,7 @@ public class Apple : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GravityApple(gravityField);
+        GravityApple(gravityField, rigidbody);
     }
     private void WaitForLaunch()
     {
@@ -144,10 +144,11 @@ public class Apple : MonoBehaviour
         if (transform.localScale.x < 1f) Invoke("WaitForLaunch", 0.1f);
     }
 
-    private void GravityApple(bool gravity)
+    private void GravityApple(bool gravity, Rigidbody selfRB)
     {
         if (gravity)
         {
+            selfRB.mass = 10f;
             Collider[] cols = Physics.OverlapSphere(transform.position, gravityRange);
             List<Rigidbody> rbs = new List<Rigidbody>();
 
