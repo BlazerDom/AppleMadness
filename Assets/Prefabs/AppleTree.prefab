@@ -2012,9 +2012,114 @@ MonoBehaviour:
   velScaleMin: -0.2
   velScaleMax: 1
   gravityForApple: 1
-  scoreDiffForMax: 10000
-  scoreDiffForMin: 10000
+  spawn: 0
+  scoreDiffForMax: 15000
+  scoreDiffForMin: 15000
   scoreDiffForSpeed: 10000
+  applesArray:
+  - appleName: RedApple
+    appleSkin: {fileID: 2100000, guid: 2a956551783133746b0c18fe22289926, type: 2}
+    appleChance: 0.1
+    basicChance: 0
+    sounds:
+    - {fileID: 8300000, guid: 622a5db55b2fb8640a62cc6735e6cb8c, type: 3}
+    - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
+    - {fileID: 8300000, guid: 1d9373685db5c2246bd29fe36df31fc1, type: 3}
+    - {fileID: 8300000, guid: 5fcde3c4ed893af48b2528955ad67de8, type: 3}
+    - {fileID: 8300000, guid: 50c2776e180e3db4ebba7f10c5f20eed, type: 3}
+    soundPriority: 122
+    soundVolume: 1
+    cost: 400
+    damage: 4
+    heal: 0
+    badApple: 0
+    addBasket: 0
+    gravityField: 0
+    isJumping: 0
+    bounce: 100
+    seedForce: 75
+  - appleName: YellowApple
+    appleSkin: {fileID: 2100000, guid: 0fa06894e40c61d44b40296fd3b61f9a, type: 2}
+    appleChance: 0.05
+    basicChance: 0
+    sounds:
+    - {fileID: 8300000, guid: 622a5db55b2fb8640a62cc6735e6cb8c, type: 3}
+    - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
+    - {fileID: 8300000, guid: 1d9373685db5c2246bd29fe36df31fc1, type: 3}
+    - {fileID: 8300000, guid: 5fcde3c4ed893af48b2528955ad67de8, type: 3}
+    - {fileID: 8300000, guid: 50c2776e180e3db4ebba7f10c5f20eed, type: 3}
+    soundPriority: 120
+    soundVolume: 1
+    cost: 600
+    damage: 2
+    heal: 6
+    badApple: 0
+    addBasket: 0
+    gravityField: 0
+    isJumping: 0
+    bounce: 100
+    seedForce: 75
+  - appleName: RainbowApple
+    appleSkin: {fileID: 2100000, guid: fcd06ea0527421445961417830c24662, type: 2}
+    appleChance: 0.01
+    basicChance: 0
+    sounds:
+    - {fileID: 8300000, guid: 73e6207fd9d334d41bb96f3dbc4a8b38, type: 3}
+    - {fileID: 8300000, guid: 588b25961c65ae749a9eb91f354d2444, type: 3}
+    - {fileID: 8300000, guid: ce6ae7a526f03014a9582f3e30eeb263, type: 3}
+    - {fileID: 8300000, guid: 05a175e2e647d54418badd121a180718, type: 3}
+    soundPriority: 115
+    soundVolume: 1
+    cost: 1000
+    damage: 6
+    heal: 2
+    badApple: 0
+    addBasket: 1
+    gravityField: 0
+    isJumping: 1
+    bounce: 100
+    seedForce: 75
+  - appleName: BadApple
+    appleSkin: {fileID: 2100000, guid: 5fc4a8c37ffd732418b9204329f7d39b, type: 2}
+    appleChance: 0.02
+    basicChance: 0
+    sounds:
+    - {fileID: 8300000, guid: f4827cc46906781489a1fb6c259e96a9, type: 3}
+    - {fileID: 8300000, guid: a7d58c535d410a34a95a7f218a9b2378, type: 3}
+    - {fileID: 8300000, guid: e20872725b0b4304c98276f6fa8273ec, type: 3}
+    - {fileID: 8300000, guid: e53fba2bb2a6ecb419fb93d4229e09c5, type: 3}
+    - {fileID: 8300000, guid: 562f9e7e4a3932d439a4381695917ac9, type: 3}
+    soundPriority: 118
+    soundVolume: 1
+    cost: 0
+    damage: 0
+    heal: 0
+    badApple: 1
+    addBasket: 0
+    gravityField: 0
+    isJumping: 0
+    bounce: 100
+    seedForce: 75
+  - appleName: GravityApple
+    appleSkin: {fileID: 2100000, guid: e41a2a29d4877a64493a20be8cee6cfd, type: 2}
+    appleChance: 0
+    basicChance: 0
+    sounds:
+    - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
+    - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}
+    - {fileID: 8300000, guid: 13a4a7645fefd4448aff48e58d23203d, type: 3}
+    - {fileID: 8300000, guid: 01891ecb1411f07438b985962e629094, type: 3}
+    soundPriority: 117
+    soundVolume: 1
+    cost: 8
+    damage: 2
+    heal: 2
+    badApple: 0
+    addBasket: 0
+    gravityField: 0
+    isJumping: 0
+    bounce: 75
+    seedForce: 75
 --- !u!82 &516359139940300616
 AudioSource:
   m_ObjectHideFlags: 0

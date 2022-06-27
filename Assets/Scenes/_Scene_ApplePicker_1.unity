@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1087102803}
-  m_IndirectSpecularColor: {r: 0.37160963, g: 0.68334764, b: 0.8750754, a: 1}
+  m_IndirectSpecularColor: {r: 0.3719616, g: 0.6833366, b: 0.8751169, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -928,6 +928,26 @@ PrefabInstance:
     - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: scoreDiffForMin
       value: 15000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[5].cost
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[5].bounce
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[5].damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[5].badApple
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[5].gravityField
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5074988317678018689, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_Materials.Array.data[0]

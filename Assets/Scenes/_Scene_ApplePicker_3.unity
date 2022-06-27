@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1087102803}
-  m_IndirectSpecularColor: {r: 0.37153304, g: 0.68318754, b: 0.8750473, a: 1}
+  m_IndirectSpecularColor: {r: 0.37420297, g: 0.68430674, b: 0.8754719, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1099,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: scoreDiffForSpeed
       value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018784223294725012, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
+      propertyPath: applesArray.Array.data[0].appleChance
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 5074988317678018689, guid: 599b6efea1b302940b178a1d884ede0d, type: 3}
       propertyPath: m_Materials.Array.data[0]

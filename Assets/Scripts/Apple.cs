@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
+    public AppleSpawner appleSpawnerScript;
+
+    public string appleName = "Apple";
+
     public static float bottomY = -14f;
 
     public int cost = 100;
@@ -59,19 +63,20 @@ public class Apple : MonoBehaviour
         float r = Random.value;
         float j = 0f;
         audioSource.clip = greenAppleSound[Random.Range(0, greenAppleSound.Length)];
-        for (int i = 0; i < applesArray.Length; i++)
+        for (int i = 0; i < appleSpawnerScript.applesArray.Length; i++)
         {
-            if (i > 0) j += applesArray[i - 1].appleChance;
-            if (r != 0 && r > j && r < j + applesArray[i].appleChance)
+            if (i > 0) j += appleSpawnerScript.applesArray[i - 1].appleChance;
+            if (r != 0 && r > j && r < j + appleSpawnerScript.applesArray[i].appleChance)
             {
-                mr.material = applesArray[i].appleSkin;
-                cost = applesArray[i].cost;
-                damage = applesArray[i].damage;
-                heal = applesArray[i].heal;
-                badApple = applesArray[i].badApple;
-                addBasket = applesArray[i].addBasket;
-                gravityField = applesArray[i].gravityField;
-                isJumping = applesArray[i].isJumping;
+                appleName = appleSpawnerScript.applesArray[i].appleName;
+                mr.material = appleSpawnerScript.applesArray[i].appleSkin;
+                cost = appleSpawnerScript.applesArray[i].cost;
+                damage = appleSpawnerScript.applesArray[i].damage;
+                heal = appleSpawnerScript.applesArray[i].heal;
+                badApple = appleSpawnerScript.applesArray[i].badApple;
+                addBasket = appleSpawnerScript.applesArray[i].addBasket;
+                gravityField = appleSpawnerScript.applesArray[i].gravityField;
+                isJumping = appleSpawnerScript.applesArray[i].isJumping;
 
                 if(badApple == true)
                 {
@@ -86,9 +91,9 @@ public class Apple : MonoBehaviour
                 }
                 if (isJumping == true) Jumping();
 
-                audioSource.clip = applesArray[i].sounds[Random.Range(0, applesArray[i].sounds.Length)];
-                audioSource.priority = applesArray[i].soundPriority;
-                audioSource.volume = applesArray[i].soundVolume;
+                audioSource.clip = appleSpawnerScript.applesArray[i].sounds[Random.Range(0, applesArray[i].sounds.Length)];
+                audioSource.priority = appleSpawnerScript.applesArray[i].soundPriority;
+                audioSource.volume = appleSpawnerScript.applesArray[i].soundVolume;
 
             }
         }

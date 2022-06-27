@@ -18,6 +18,8 @@ public class AppleSpawner : MonoBehaviour
     public float velScaleMax = 1f;
     private float dirrection = 0;
     public bool gravityForApple = true;
+    [HideInInspector]
+    public float spawn = 0f;
 
     public int scoreDiffForMax = 10000;
     public int scoreDiffForMin = 10000;
@@ -27,7 +29,16 @@ public class AppleSpawner : MonoBehaviour
     private Text scoreGT;
     private Animator rollingAnim;
     private AudioSource audioSorce;
-    // Start is called before the first frame update
+
+    public Apples[] applesArray;
+
+    private void Awake()
+    {
+        foreach (Apples a in applesArray)
+        {
+            a.basicChance = a.appleChance;
+        }
+    }
     void Start()
     {
         audioSorce = GetComponent<AudioSource>();
@@ -96,13 +107,15 @@ public class AppleSpawner : MonoBehaviour
     }
     private void AppleCreator(float minF, float maxF)
     {
-        int spawn = Random.Range(spawnMin, spawnMax);
+        spawn = Random.Range(spawnMin, spawnMax);
         for(int i=0; i <= spawn; i++)
         {
             int spawnPointIndex = Random.Range(0, leavesSpawnerGO.Length);
             dirrection = Random.Range(minF, maxF);
 
             thatAppleGO = Instantiate<GameObject>(appleGO);
+            Apple ap = thatAppleGO.GetComponent<Apple>();
+            ap.appleSpawnerScript = GetComponent<AppleSpawner>();
             thatAppleGO.SetActive(true);
             thatAppleGO.transform.SetPositionAndRotation(leavesSpawnerGO[spawnPointIndex].transform.position, new Quaternion (0,0, Random.Range(-0.1f, 0.1f), 1));
             thatAppleGO.transform.parent = leavesSpawnerGO[spawnPointIndex].transform;
@@ -110,16 +123,66 @@ public class AppleSpawner : MonoBehaviour
             appleRB = thatAppleGO.GetComponent<Rigidbody>();
             appleRB.useGravity = gravityForApple;
 
-            StartCoroutine(WaitForApple(thatAppleGO, appleRB, dirrection, 2.2f / treeRotSpeed));            
+            StartCoroutine(WaitForApple(thatAppleGO, ap, appleRB, dirrection, 2.2f / treeRotSpeed));            
         }
     }
 
-    IEnumerator WaitForApple(GameObject thatAppleGO, Rigidbody appleRB, float dirrection, float i)
+    IEnumerator WaitForApple(GameObject thatAppleGO, Apple ap, Rigidbody appleRB, float dirrection, float i)
     {
         yield return new WaitForSeconds(i);
         thatAppleGO.transform.parent = null;
         appleRB.isKinematic = false;
         appleRB.AddForce(new Vector3(dirrection, Random.Range(1f, 1f), 0) * appleVel);
         appleRB.AddTorque(Random.insideUnitSphere * 5f);
+        var appleName = ap.appleName;
+        if (appleName == "Apple")
+        {
+            foreach (Apples apple in applesArray)
+            {
+                apple.appleChance *= 1.1f;
+            }
+        }
+        else
+        {
+            foreach (Apples apple in applesArray)
+            {
+                if (appleName == apple.appleName)
+                {
+                    apple.appleChance = apple.basicChance / 3;
+                }
+                else
+                {
+                    apple.appleChance *= 1.1f;
+                }
+            }
+        }
     }
+
+    [System.Serializable]
+    public class Apples
+    {
+        public string appleName = "";
+        public Material appleSkin;
+        public float appleChance = 0f;
+
+        //[HideInInspector]
+        public float basicChance = 0f;
+
+        public AudioClip[] sounds;
+        public int soundPriority;
+        public float soundVolume;
+
+        public int cost = 0;
+        public int damage = 2;
+        public int heal = 0;
+
+        public bool badApple = false;
+        public bool addBasket = false;
+        public bool gravityField = false;
+        public bool isJumping = false;
+
+        public float bounce = 100f;
+        public float seedForce = 75f;
+    }
+
 }
