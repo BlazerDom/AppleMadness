@@ -2020,7 +2020,9 @@ MonoBehaviour:
   - appleName: RedApple
     appleSkin: {fileID: 2100000, guid: 2a956551783133746b0c18fe22289926, type: 2}
     appleChance: 0.1
-    basicChance: 0
+    chanceClampValue: 0.5
+    basicMinChance: 0.05
+    basicMaxChance: 0.3
     sounds:
     - {fileID: 8300000, guid: 622a5db55b2fb8640a62cc6735e6cb8c, type: 3}
     - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
@@ -2041,7 +2043,9 @@ MonoBehaviour:
   - appleName: YellowApple
     appleSkin: {fileID: 2100000, guid: 0fa06894e40c61d44b40296fd3b61f9a, type: 2}
     appleChance: 0.05
-    basicChance: 0
+    chanceClampValue: 0.5
+    basicMinChance: 0.02
+    basicMaxChance: 0.2
     sounds:
     - {fileID: 8300000, guid: 622a5db55b2fb8640a62cc6735e6cb8c, type: 3}
     - {fileID: 8300000, guid: e4d082b6c51400f48bc8ada878df0f66, type: 3}
@@ -2062,7 +2066,9 @@ MonoBehaviour:
   - appleName: RainbowApple
     appleSkin: {fileID: 2100000, guid: fcd06ea0527421445961417830c24662, type: 2}
     appleChance: 0.01
-    basicChance: 0
+    chanceClampValue: 0.5
+    basicMinChance: 0
+    basicMaxChance: 0.1
     sounds:
     - {fileID: 8300000, guid: 73e6207fd9d334d41bb96f3dbc4a8b38, type: 3}
     - {fileID: 8300000, guid: 588b25961c65ae749a9eb91f354d2444, type: 3}
@@ -2082,7 +2088,9 @@ MonoBehaviour:
   - appleName: BadApple
     appleSkin: {fileID: 2100000, guid: 5fc4a8c37ffd732418b9204329f7d39b, type: 2}
     appleChance: 0.02
-    basicChance: 0
+    chanceClampValue: 0.5
+    basicMinChance: 0.01
+    basicMaxChance: 0.15
     sounds:
     - {fileID: 8300000, guid: f4827cc46906781489a1fb6c259e96a9, type: 3}
     - {fileID: 8300000, guid: a7d58c535d410a34a95a7f218a9b2378, type: 3}
@@ -2103,7 +2111,9 @@ MonoBehaviour:
   - appleName: GravityApple
     appleSkin: {fileID: 2100000, guid: e41a2a29d4877a64493a20be8cee6cfd, type: 2}
     appleChance: 0
-    basicChance: 0
+    chanceClampValue: 0
+    basicMinChance: 0
+    basicMaxChance: 0
     sounds:
     - {fileID: 8300000, guid: 8d2e2f690af0c5c45a9144786099f911, type: 3}
     - {fileID: 8300000, guid: 654537fefdab2594cb481ad1bcf83fa6, type: 3}

@@ -36,7 +36,7 @@ public class AppleSpawner : MonoBehaviour
     {
         foreach (Apples a in applesArray)
         {
-            a.basicChance = a.appleChance;
+            a.chanceLerpValue = a.appleChance / (a.basicMaxChance - a.basicMinChance);
         }
     }
     void Start()
@@ -135,24 +135,32 @@ public class AppleSpawner : MonoBehaviour
         appleRB.AddForce(new Vector3(dirrection, Random.Range(1f, 1f), 0) * appleVel);
         appleRB.AddTorque(Random.insideUnitSphere * 5f);
         var appleName = ap.appleName;
+
+        //Циклы для увелечения и уменьшения шанса выпадения уникальных яблок
         if (appleName == "Apple")
         {
+            //Если уникальное яблоко не выпадет, то у него увеличивется шанс выпадения
             foreach (Apples apple in applesArray)
             {
-                apple.appleChance *= 1.1f;
+                if (apple.chanceLerpValue < 1) apple.chanceLerpValue += treeRotSpeed / (spawnMax * 10);
+                if (apple.chanceLerpValue > 1) apple.chanceLerpValue = 1;
+                apple.appleChance = Mathf.Lerp(apple.basicMinChance, apple.basicMaxChance, apple.chanceLerpValue);
             }
         }
         else
         {
+            //Если уникальное яблоко выпадает, то у него уменьшается шанс выпадения
             foreach (Apples apple in applesArray)
             {
                 if (appleName == apple.appleName)
                 {
-                    apple.appleChance = apple.basicChance / 3;
+                    if (apple.chanceLerpValue > 0) apple.chanceLerpValue = 0f;
+                    apple.appleChance = Mathf.Lerp(apple.basicMinChance, apple.basicMaxChance, apple.chanceLerpValue);
                 }
                 else
                 {
-                    apple.appleChance *= 1.1f;
+                    if (apple.chanceLerpValue < 1) apple.chanceLerpValue += 0.1f;
+                    apple.appleChance = Mathf.Lerp(apple.basicMinChance, apple.basicMaxChance, apple.chanceLerpValue);
                 }
             }
         }
@@ -163,10 +171,13 @@ public class AppleSpawner : MonoBehaviour
     {
         public string appleName = "";
         public Material appleSkin;
+
         public float appleChance = 0f;
 
-        //[HideInInspector]
-        public float basicChance = 0f;
+        [HideInInspector]
+        public float chanceLerpValue = 0.5f;
+        public float basicMinChance = 0f;
+        public float basicMaxChance = 0f;
 
         public AudioClip[] sounds;
         public int soundPriority;

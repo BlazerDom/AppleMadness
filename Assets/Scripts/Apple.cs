@@ -31,17 +31,7 @@ public class Apple : MonoBehaviour
     public GameObject badAppleGO;
     public GameObject seedGO;
 
-    //private float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
-    //private float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
-    //private float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
-    //private float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
-    //private float jumpingAppleChance = Mathf.Clamp(.02f, 0f, 1f);
-
     public AudioClip[] greenAppleSound;
-    //public AudioClip[] redAppleSound;
-    //public AudioClip[] healAppleSound;
-    //public AudioClip[] badAppleSound;
-    //public AudioClip[] resurectAppleSound;
 
     private new Rigidbody rigidbody;
     //private Collider gravityColl;
@@ -181,7 +171,7 @@ public class Apple : MonoBehaviour
         {
             float x = Random.Range(-400f, 400f);
             float y = Random.Range(0f, 220f);
-            float t = Random.Range(0.2f, 0.6f);
+            float t = Random.Range(0.4f, 0.8f);
             //Vector2 rc = Random.insideUnitCircle * 400;
             rigidbody.AddForce(new Vector3(x, y));
             Invoke("Jumping", t);
