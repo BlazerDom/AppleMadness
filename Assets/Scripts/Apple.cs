@@ -169,11 +169,10 @@ public class Apple : MonoBehaviour
     {
         if (transform.position.y > -10)
         {
-            float x = Random.Range(-400f, 400f);
-            float y = Random.Range(0f, 220f);
-            float t = Random.Range(0.4f, 0.8f);
-            //Vector2 rc = Random.insideUnitCircle * 400;
-            rigidbody.AddForce(new Vector3(x, y));
+            float t = Random.Range(0.2f, 0.6f);
+            Vector2 rc = Random.insideUnitCircle * 400;
+            var f = new Vector3(rc.x, rc.y);
+            rigidbody.AddForce(f);
             Invoke("Jumping", t);
         }
     }

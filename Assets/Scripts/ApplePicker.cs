@@ -15,14 +15,6 @@ public class ApplePicker : MonoBehaviour
     public int basketHP = 10;
     public float basketStretch = 10;
 
-    //[Header("Set Apple Chances")]
-    //public float redAppleChance = Mathf.Clamp(.1f, 0f, 1f);
-    //public float healAppleChance = Mathf.Clamp(.05f, 0f, 1f);
-    //public float badAppleChance = Mathf.Clamp(.03f, 0f, 1f);
-    //public float resurectAppleChance = Mathf.Clamp(.01f, 0f, 1f);
-    //public float jumpingAppleChance = Mathf.Clamp(.02f, 0f, 1f);
-    //public float appleBounce = 100f;
-
     public List<GameObject> lBaskets;
     public List<Basket> lScript;
     public List<Slider> lBasketSL;
