@@ -30,6 +30,7 @@ public class Apple : MonoBehaviour
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
     public GameObject seedGO;
+    public GameObject explosion;
 
     public AudioClip[] greenAppleSound;
 
@@ -120,6 +121,8 @@ public class Apple : MonoBehaviour
             death = true;
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed(this.gameObject, damage);
+            var rotation = new Quaternion();
+            var ex = Instantiate<GameObject>(explosion, transform.position, rotation);
         }
         if (!rigidbody.isKinematic && soundPlayInt == 0)
         {
