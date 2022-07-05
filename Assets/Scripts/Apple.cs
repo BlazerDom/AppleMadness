@@ -26,6 +26,8 @@ public class Apple : MonoBehaviour
 
     public bool gravityField = false;
 
+    public Color appleColor;
+
     //public Material[] appleMaterials;
     public GameObject goodAppleGO;
     public GameObject badAppleGO;
@@ -68,8 +70,9 @@ public class Apple : MonoBehaviour
                 addBasket = appleSpawnerScript.applesArray[i].addBasket;
                 gravityField = appleSpawnerScript.applesArray[i].gravityField;
                 isJumping = appleSpawnerScript.applesArray[i].isJumping;
+                appleColor = appleSpawnerScript.applesArray[i].appleColor;
 
-                if(badApple == true)
+                if (badApple == true)
                 {
                     goodAppleGO.SetActive(false);
                     badAppleGO.SetActive(true);           
@@ -88,6 +91,11 @@ public class Apple : MonoBehaviour
 
             }
         }
+
+        //var outline = GetComponent<Outline>();
+        //appleColor.a = 1f;
+        //outline.OutlineColor = appleColor;
+        
     }
 
     private void Update()
@@ -121,8 +129,15 @@ public class Apple : MonoBehaviour
             death = true;
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed(this.gameObject, damage);
-            var rotation = new Quaternion();
-            var ex = Instantiate<GameObject>(explosion, transform.position, rotation);
+            for (int i = 0; i < 1; i++)
+            {
+                var rotation = new Quaternion();
+                var ex = Instantiate<GameObject>(explosion, transform.position, rotation);
+                ParticleSystem[] exAll = ex.GetComponentsInChildren<ParticleSystem>();
+                var ex2 = exAll[2];
+                var ex2Main = ex2.main;
+                ex2Main.startColor = appleColor;
+            }
         }
         if (!rigidbody.isKinematic && soundPlayInt == 0)
         {

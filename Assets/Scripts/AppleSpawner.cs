@@ -171,6 +171,7 @@ public class AppleSpawner : MonoBehaviour
     {
         public string appleName = "";
         public Material appleSkin;
+        public Color appleColor;
 
         public float appleChance = 0f;
 
