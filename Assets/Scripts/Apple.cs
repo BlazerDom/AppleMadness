@@ -137,6 +137,8 @@ public class Apple : MonoBehaviour
                 var ex2 = exAll[2];
                 var ex2Main = ex2.main;
                 ex2Main.startColor = appleColor;
+                goodAppleGO.SetActive(false);
+                badAppleGO.SetActive(false);
             }
         }
         if (!rigidbody.isKinematic && soundPlayInt == 0)
